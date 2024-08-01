@@ -7,6 +7,6 @@ export const USER_TYPES = {
   export const LAYOUTS = {
     PATIENT: { sidebar: ['Home', 'Profile', 'Messages', 'Settings'] },
     PROFESSIONAL: { sidebar: ['Dashboard', 'Clients', 'Appointments', 'Messages', 'Settings'] },
-    ADMIN: { sidebar: ['Admin Dashboard', 'User Management', 'Reports', 'System Settings'] },
+    ADMIN: { sidebar: ['Dashboard', 'Management', 'Reports', 'System Settings'] },
   };
   

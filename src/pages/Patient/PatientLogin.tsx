@@ -36,13 +36,13 @@ const PatientLogin = () => {
     }
     return (
         <SimpleGrid cols={isSmallScreen ? 1 : 2} spacing="md" style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', }}>
-        <Flex justify='center' align='center' style={{ height: '100%', }}>
+        <Flex justify='flex-start'  align='center' style={{ height: '100%',width:'100%' }}>
          {!isSmallScreen && <Image 
             src='/src/assets/auth_img2.png'
             alt="terminal"
-            style={{ maxWidth: '100%', height: 'auto', }} 
+            style={{ maxWidth: '100%', height: '60rem', }} 
           />}
-        </Flex>
+      </Flex>
         <Box style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -75,52 +75,51 @@ const PatientLogin = () => {
               </Box>
             
             </Box>
-                   <form style={{display:'grid', gap:20}}>
-                    <Box >  
-                    <label style={{display:'flex', justifyContent:'flex-start', fontWeight:'semiBold'}}>Email Address</label>                    
-                      <CustomInput 
-                      type='email'
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      icon={IoMdPerson}
-                      iconPosition="right"
-                      placeholder="Email Address"
-                      style={{ width: isSmallScreen ? '17rem' : '18rem' }}
-                       />
-                    </Box>
-
-                    <Box >  
-                    <label style={{display:'flex', justifyContent:'flex-start', fontWeight:'semiBold'}}>Password</label>                    
-                      <CustomInput 
-                      type='password'
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      icon={IoMdLock }
-                      iconPosition="right"
-                      placeholder="password"
-                      style={{ width: isSmallScreen ? '100%' : '18rem' }}
-                       />
-                    </Box>
-                    <Box style={{display: 'flex', justifyContent:'space-between'}}>
-                    <Checkbox
-                   defaultChecked
-                   label="Remember me"
-                       />
-                       <Text onClick={handleForget} style={{fontSize: '14px', color:'blue', cursor: 'pointer'}}> Forgotten password?</Text>
-                    </Box>
-                    <ActionButton 
-                    onClick={handleLogin}
-                     isLoading={loading}
-                     variant="filled"
-                    color="#008C73"
-                    size="sm"
-                    radius="sm"
-                    fullWidth={true}
-                     >
-                      {loading ? 'Loading...' : 'Login'}
-                    </ActionButton>
-                    <Text style={{fontSize:15}}>Don't have an account? <span onClick={handleReg} style={{fontWeight:'bold', color:'#008C73', cursor: 'pointer'}}>Register</span></Text>
-                    </form>   
+            <form style={{ display: 'grid', gap: 20, justifyContent:'center', alignItems:'center' }}>
+            <Box>
+               
+               <CustomInput
+                 type='email'
+                 value={email}
+                 onChange={(e) => setEmail(e.target.value)}
+                 icon={IoMdPerson}
+                 iconPosition="right"
+                 placeholder="Email Address"
+                 style={{ width: isSmallScreen ? '17rem' : '18rem' }}
+                 label="Email Address"
+               />
+             </Box>
+             <Box>
+               
+               <CustomInput
+                 type='password'
+                 value={password}
+                 onChange={(e) => setPassword(e.target.value)}
+                 icon={IoMdLock}
+                 iconPosition="right"
+                 placeholder="password"
+                 style={{ width: isSmallScreen ? '17rem' : '18rem' }}
+                 label="Email Address"
+               />
+             </Box>
+             
+              <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Checkbox defaultChecked label="Remember me" />
+                <Text onClick={handleForget} style={{ fontSize: '14px', color: 'blue', cursor: 'pointer' }}>Forgotten password?</Text>
+              </Box>
+              <ActionButton
+                onClick={handleLogin}
+                isLoading={loading}
+                variant="filled"
+                color="#008C73"
+                size="sm"
+                radius="sm"
+                fullWidth={true}
+              >
+                {loading ? 'Loading...' : 'Submit'}
+              </ActionButton>
+              <Text style={{ fontSize: 15 }}>Don't have an account? <span onClick={handleReg} style={{ fontWeight: 'bold', color: '#008C73', cursor: 'pointer' }}>Register</span></Text>
+            </form>   
           </Box>
           </Box>
         </Box>

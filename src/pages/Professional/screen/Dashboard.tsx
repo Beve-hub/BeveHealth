@@ -4,7 +4,7 @@ interface Props {
     
 }
 
-const AdminLayout: React.FC<Props> = () => {
+const Dashboard: React.FC<Props> = () => {
     return (
         <div>
             
@@ -12,4 +12,4 @@ const AdminLayout: React.FC<Props> = () => {
     )
 }
 
-export default AdminLayout
+export default Dashboard

@@ -18,11 +18,11 @@ const Onboarding = () => {
 
   return (
     <SimpleGrid cols={isSmallScreen ? 1 : 2} spacing="md" style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', }}>
-      <Flex justify='center' align='center' style={{ height: '100%' }}>
+      <Flex justify='flex-start'  align='center' style={{ height: '100%',width:'100%' }}>
          {!isSmallScreen && <Image 
             src='/src/assets/auth_img2.png'
             alt="terminal"
-            style={{ maxWidth: '100%', height: 'auto', }} 
+            style={{ maxWidth: '100%', height: '60rem', }} 
           />}
       </Flex>
       <Box

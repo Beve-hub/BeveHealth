@@ -11,12 +11,15 @@ import { MdEmail,  } from "react-icons/md";
 import { BiSolidCalendar } from "react-icons/bi";
 import { MdHomeWork } from "react-icons/md";
 import { FaTreeCity } from "react-icons/fa6";
+import { MdPhoneEnabled } from "react-icons/md";
 
 const PatientRegister = () => {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [name, setName] = useState('');
+  const [title, setTitle] = useState('');
+  const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [date, setDate] = useState('');
   const [gender, setGender] = useState('');
@@ -42,7 +45,7 @@ const PatientRegister = () => {
     <div style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
      
      
-       <Box style={{backgroundColor: '#f5f5f5', padding: isSmallScreen ? '1rem' : '5rem',}}>
+       <Box style={{backgroundColor: '#f5f5f5', padding: isSmallScreen ? '1rem' : '4rem',}}>
         <Box style={{ textAlign: 'center', marginBottom: '2rem',  }}>
           <Image              
             src='/src/assets/logo.svg'
@@ -67,6 +70,16 @@ const PatientRegister = () => {
                  <form style={{display:'grid', gap:20}}>
                  <SimpleGrid cols={isSmallScreen ? 1 : 2}>
                  <Box >  
+                  <label style={{display:'flex', justifyContent:'flex-start', fontWeight:'semiBold'}}>Title</label>                    
+                  <Select                   
+                   comboboxProps={{ withinPortal: true }}
+                   value={title}
+                   data={['Mr', 'Mrs', 'Miss', 'Hon']}
+                   onChange={(value) => setTitle(value || '')}
+                   placeholder="Choose a title"
+                   />
+                  </Box>
+                 <Box >  
                   <label style={{display:'flex', justifyContent:'flex-start', fontWeight:'semiBold'}}>Full Name</label>                    
                     <CustomInput 
                     type='text'
@@ -85,6 +98,18 @@ const PatientRegister = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     icon={MdEmail}
+                    iconPosition="right"
+                    placeholder="Email Address"
+                    
+                     />
+                  </Box>
+                  <Box >  
+                  <label style={{display:'flex', justifyContent:'flex-start', fontWeight:'semiBold'}}>Phone Number</label>                    
+                    <CustomInput 
+                    type='text'
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    icon={MdPhoneEnabled }
                     iconPosition="right"
                     placeholder="Email Address"
                     
@@ -165,6 +190,7 @@ const PatientRegister = () => {
                   </form>  
                  
         </Box>
+        <Box style={{display:'flex', justifyContent:'center'}}>
         <Box style={{display:'grid', maxWidth:'13rem',  marginTop:20, alignItems:'center'}}>
                   <ActionButton 
                   onClick={handleRegister}
@@ -175,10 +201,11 @@ const PatientRegister = () => {
                   radius="sm"
                   fullWidth={false}
                    >
-                    {loading ? 'Loading...' : 'Login'}
+                    {loading ? 'Loading...' : 'Submit'}
                   </ActionButton>
-                  <Text style={{fontSize:14,marginTop:10, textAlign:'center', }}>Don't have an account? <span onClick={handleLogin} style={{fontWeight:'bold', color:'#008C73', cursor: 'pointer'}}>Register</span></Text> 
+                  <Text style={{fontSize:14,marginTop:10, textAlign:'center', }}>Already have an account? <span onClick={handleLogin} style={{fontWeight:'bold', color:'#008C73', cursor: 'pointer'}}>Login</span></Text> 
                   </Box>
+        </Box>
         </Box>
 
     </div>
