@@ -1,9 +1,15 @@
 // PatientDashboard.js
 'use client'
 import { useState } from 'react';
-import { AppShell, Burger, Image, Group, NavLink, AppShellHeader, Avatar, Text, Box } from '@mantine/core';
+import { AppShell, Burger, Image, Group, NavLink, AppShellHeader,  Text, Box } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import { FiLogOut } from "react-icons/fi";
+import { FiLogOut, FiSettings } from "react-icons/fi";
+import { FaRegCircleUser } from "react-icons/fa6";
+
+import Overview from './screen/overview/Overview';
+import Appointment from './screen/appointment/Appointment';
+import Document from './screen/document/Document';
+import Messages from './screen/message/Messages';
 
 const data = [
   { label: 'OverView', path: '/overView' },
@@ -16,17 +22,18 @@ const PatientDashboard = () => {
   const [opened, { toggle }] = useDisclosure(false);
   const [activePath, setActivePath] = useState(data[0].path); // Initialize with the first path
   const isSmallScreen = useMediaQuery('(max-width: 768px)');
+  const isSmall = useMediaQuery('(min-width: 768px)');
 
   const renderContent = () => {
     switch (activePath) {
       case '/overView':
-        return <div>OverView Content</div>;
+        return <Overview/>;
       case '/appointment':
-        return <div>Appointment Content</div>;
+        return <Appointment/>;
       case '/document':
-        return <div>Document Content</div>;
+        return <Document/>;
       case '/messages':
-        return <div>Messages Content</div>;
+        return <Messages />;
       default:
         return <div>Select a section</div>;
     }
@@ -71,20 +78,38 @@ const PatientDashboard = () => {
           ))}
           
           {isSmallScreen && (
-            <Box style={{ position: 'absolute', bottom: 60, width: '80%', borderTop: '1px solid #ccc', marginLeft: 30,padding:20, }}>
+            <Box style={{ position: 'absolute', bottom: 20, width: '80%', borderTop: '1px solid #ccc', padding:20, }}>
               <Group display="flex" mt="auto" style={{ width: '100%' }}>
-                <Group justify="center" mb="10" style={{ width: '100%' }}>
-                  <Avatar size="lg" src="/src/assets/user.png" alt="user" />
-                  <Text fw="400" fz="20" ml="2">User Name</Text>
-                </Group>
-                <a href='/patientLogin' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 20, cursor: 'pointer' }}>
-                  <FiLogOut size={30} color='gray'/>
-                  <Text fw="400" fz="20" ml="20" color='#121212'>Log Out</Text>
+                <a style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 20, cursor: 'pointer', alignItems:'center',  }}>
+                  <FaRegCircleUser size={24}  color='gray'/>
+                  <Text fw="400" fz="20" >User Name</Text>
+                </a>
+                <a  href='/settings' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 50, cursor: 'pointer', alignItems:'center',  }}>
+                  <FiSettings size={24}  color='gray'/>
+                  <Text fw="400" fz="20"  color='#121212'>Settings</Text>
+                </a>
+                <a href='/patientLogin' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 50, cursor: 'pointer' , alignItems:'center', }}>
+                  <FiLogOut size={24} color='gray'/>
+                  <Text fw="400" fz="20"  color='#121212'>Log Out</Text>
+                </a>
+                
+              </Group>
+            </Box>
+          )}
+          {isSmall && (
+            <Box style={{ position: 'absolute', bottom: 40, width: '80%', borderTop: '1px solid #ccc', marginLeft: 30,padding:20, }}>
+              <Group display="flex" mt="auto" style={{ width: '100%' }}>
+                <a  href='/settings' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 20, cursor: 'pointer', alignItems:'center',  }}>
+                  <FiSettings size={24}  color='gray'/>
+                  <Text fw="400" fz="20"  color='#121212'>Settings</Text>
+                </a>
+                <a href='/patientLogin' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 20, cursor: 'pointer' , alignItems:'center', }}>
+                  <FiLogOut size={24} color='gray'/>
+                  <Text fw="400" fz="20"  color='#121212'>Log Out</Text>
                 </a>
               </Group>
             </Box>
           )}
-          
         </Group>
       </AppShell.Navbar>
 
