@@ -6,10 +6,10 @@ import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { FiLogOut, FiSettings } from "react-icons/fi";
 import { FaRegCircleUser } from "react-icons/fa6";
 
-import Overview from './screen/overview/Overview';
-import Appointment from './screen/appointment/Appointment';
-import Document from './screen/document/Document';
-import Messages from './screen/message/Messages';
+import Overview from './screen/overview/OverviewPatient';
+import Appointment from './screen/appointment/AppointmentPatient';
+import Document from './screen/document/DocumentPatient';
+import Messages from './screen/message/MessagesPatient';
 
 const data = [
   { label: 'OverView', path: '/overView' },

@@ -3,12 +3,13 @@ import {TextInput ,ActionIcon, UnstyledButton,Avatar, Group,Text, } from '@manti
 import { IoNotificationsOutline } from "react-icons/io5";
 import { useMediaQuery,} from '@mantine/hooks';
 
-const Header = () => {
+
+const HeaderMes = () => {
     const isSmallScreen = useMediaQuery('(min-width: 768px)');
     const [search, setSearch] = useState('');
       return (
           <Group display="flex" justify='space-between' >
-              <Text fz="30" fw="600">Appointment</Text>
+              <Text fz="30" fw="600">Messages</Text>
   
   
               { isSmallScreen && (<Group >
@@ -42,4 +43,4 @@ const Header = () => {
       )
 }
 
-export default Header
+export default HeaderMes

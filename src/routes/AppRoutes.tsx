@@ -11,6 +11,7 @@ import ForgottenPassword from '../pages/auth/ForgottenPassword';
 import PatientDashboard from '../pages/Patient/PatientDashboard';
 import ProfessionalDashboard from '../pages/Professional/ProfessionalDashboard';
 import AdminDashboard from '../pages/Admin/AdminDashboard';
+import OverviewPatient from '../pages/Patient/screen/overview/OverviewPatient';
 
 
 
@@ -32,6 +33,7 @@ const AppRoutes: React.FC = () => {
                 <Route path='/patientRegister' Component={PatientRegister} />
                 <Route path='/adminRegister' Component={AdminRegister} />
                 <Route path='/forgottenPassword' Component={ForgottenPassword} />
+                <Route path='/overviewPatient' Component={OverviewPatient} />
             </Routes>
         </Router>
     )

@@ -5,12 +5,7 @@ import Body from './Body';
 
 
 
-const Overview = () => {
-
-
-
-
-
+const OverviewPatient = () => {
   return (
     <Container size="xl" my="md">
         <Header/>
@@ -19,4 +14,4 @@ const Overview = () => {
   );
 }
 
-export default Overview;
+export default OverviewPatient;
