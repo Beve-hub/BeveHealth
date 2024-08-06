@@ -4,6 +4,7 @@ import App from './App.tsx'
 
 import { createTheme, MantineProvider, rem,  } from '@mantine/core';
 import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 

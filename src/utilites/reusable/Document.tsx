@@ -1,6 +1,6 @@
-import { Card,  Group,  Text, UnstyledButton, ActionIcon} from '@mantine/core';
+import { Card,  Group,  Text,  ActionIcon} from '@mantine/core';
 import { IconDownload, IconFolder,  } from '@tabler/icons-react';
-import { MdKeyboardArrowRight } from "react-icons/md";
+
 
 const Document = () => {
     return (
@@ -14,8 +14,7 @@ const Document = () => {
         }}
       >
         <Group justify='space-between'>
-        <Text fz="20" fw="bold">Document</Text>
-        <UnstyledButton style={{display:'flex', alignItems:'center', gap:10}}> <Text color="#006250" >view All </Text> <MdKeyboardArrowRight size={20} /> </UnstyledButton>
+        <Text fz="20" fw="bold">Document</Text>        
         </Group>
   
         <Group justify='space-between' my="lg" style={{borderBottom:"2px solid #12121250", paddingBottom:10}}>

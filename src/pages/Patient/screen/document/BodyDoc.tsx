@@ -1,5 +1,8 @@
-import { Button, Group,Table, Box, ScrollArea } from "@mantine/core"
-import { IconDownload } from "@tabler/icons-react";
+import { useRef,useState } from 'react';
+import { Textarea,ActionIcon, rem, Modal, NativeSelect, TextInput, UnstyledButton,Button, Group,Table, Box, ScrollArea } from "@mantine/core"
+import { IconDownload,IconClock } from "@tabler/icons-react";
+import { useDisclosure } from '@mantine/hooks';
+import { DateInput,TimeInput } from '@mantine/dates';
 
 const data = [
     {
@@ -105,10 +108,59 @@ const BodyDoc = () => {
           <Table.Td fz="18">{element.Action}</Table.Td>
         </Table.Tr>
       ));
+  const [provider, setProvider] = useState('');
+  const [practice, setPractice] = useState('');
+  const [date, setDate] = useState<Date | null>(null);
+  const ref = useRef<HTMLInputElement>(null);
+  const [opened, { open, close }] = useDisclosure(false);
+  const pickerControl = (
+    <ActionIcon variant="subtle" color="gray" onClick={() => ref.current?.showPicker()}>
+      <IconClock style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+    </ActionIcon>
+  );
     return (
         <div>
             <Group my="50" justify="flex-end">
-                <Button size="md" color="#008C73">Book Session</Button>
+                <Button  onClick={open} size="md" color="#008C73">Book Session</Button>
+                <Modal opened={opened} onClose={close} title="Schedule Appointment" centered>
+        <form>
+        <TextInput
+          label="Provider"
+          value={provider}
+          onChange={(event) => setProvider(event.currentTarget.value)}
+         
+        />
+        <NativeSelect
+          label="Practice"
+          value={practice}
+          onChange={(event) => setPractice(event.currentTarget.value)}
+          data={['Surgeon', 'Radiographer', 'Pediatrics', 'Dentist', 'Pharmacist']}
+        />
+        <DateInput       
+      value={date}
+      onChange={setDate}
+      label="Appointment Date"
+      placeholder="Date input"
+      />
+     <TimeInput
+      label="Appointment Time"
+      placeholder="Input placeholder"
+      ref={ref}
+      rightSection={pickerControl}
+      />
+       <Textarea
+      label="Reason"      
+      placeholder="Input placeholder"
+      />
+    
+    <Group justify='flex-end' my="20">
+    <UnstyledButton onClick={close} variant="filled" size="sm" color="gray" >Cancel</UnstyledButton>
+      <Button type="submit" variant="filled" size="sm" color="#006250" radius="md">Schedule</Button>
+     
+     
+    </Group>
+        </form>
+               </Modal>
             </Group>
 
             <Box style={{    

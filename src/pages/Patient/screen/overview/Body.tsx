@@ -10,8 +10,9 @@ import PatientProfile from '../../../../component/Layout/patient/PatientProfile'
 
 
 
+
 const Body = () => {  
- 
+
     return (
       <div  style={{ marginTop:100}}>
           <Grid my="md" gutter="lg">
@@ -25,7 +26,7 @@ const Body = () => {
        
    
         <SimpleGrid cols={{base:1, xs:3}} my="lg">
-          <div>
+          <div >
           <Document/>
           </div>
 
