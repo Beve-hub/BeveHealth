@@ -1,6 +1,7 @@
 
-import { Table, Box, ScrollArea } from "@mantine/core"
-import { IconDownload } from "@tabler/icons-react";
+import { Table, Box, ScrollArea, ActionIcon, rem, } from "@mantine/core"
+import { IconDots, IconDownload, IconNote, } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -11,84 +12,91 @@ const data = [
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
-      Action: <IconDownload/>,    
+      Action: <IconDots/>,    
     },
     {
-        provider: 'Dr David A',
-        practice: 'Lab Tech',
-        Reason: 'DNA Test',
-        Time: '10:30am',
-        Date: '23/03/2024',
-        Action: <IconDownload/>,    
-      },
-      {
-        provider: 'Dr David A',
-        practice: 'Lab Tech',
-        Reason: 'DNA Test',
-        Time: '10:30am',
-        Date: '23/03/2024',
-        Action: <IconDownload/>,    
-      },
-      {
-        provider: 'Dr David A',
-        practice: 'Lab Tech',
-        Reason: 'DNA Test',
-        Time: '10:30am',
-        Date: '23/03/2024',
-        Action: <IconDownload/>,    
-      },
-      {
-        provider: 'Dr David A',
-        practice: 'Lab Tech',
-        Reason: 'DNA Test',
-        Time: '10:30am',
-        Date: '23/03/2024',
-        Action: <IconDownload/>,    
-      },
-      {
-        provider: 'Dr David A',
-        practice: 'Lab Tech',
-        Reason: 'DNA Test',
-        Time: '10:30am',
-        Date: '23/03/2024',
-        Action: <IconDownload/>,    
-      },
-      {
-        provider: 'Dr David A',
-        practice: 'Lab Tech',
-        Reason: 'DNA Test',
-        Time: '10:30am',
-        Date: '23/03/2024',
-        Action: <IconDownload/>,    
-      },
-      {
-        provider: 'Dr David A',
-        practice: 'Lab Tech',
-        Reason: 'DNA Test',
-        Time: '10:30am',
-        Date: '23/03/2024',
-        Action: <IconDownload/>,    
-      },
-      {
-        provider: 'Dr David A',
-        practice: 'Lab Tech',
-        Reason: 'DNA Test',
-        Time: '10:30am',
-        Date: '23/03/2024',
-        Action: <IconDownload/>,    
-      },
-      {
-        provider: 'Dr David A',
-        practice: 'Lab Tech',
-        Reason: 'DNA Test',
-        Time: '10:30am',
-        Date: '23/03/2024',
-        Action: <IconDownload/>,    
-      }
+      provider: 'Dr David A',
+      practice: 'Lab Tech',
+      Reason: 'DNA Test',
+      Time: '10:30am',
+      Date: '23/03/2024',
+      Action: <IconDots/>,    
+    },
+    {
+      provider: 'Dr David A',
+      practice: 'Lab Tech',
+      Reason: 'DNA Test',
+      Time: '10:30am',
+      Date: '23/03/2024',
+      Action: <IconDots/>,    
+    },
+    {
+      provider: 'Dr David A',
+      practice: 'Lab Tech',
+      Reason: 'DNA Test',
+      Time: '10:30am',
+      Date: '23/03/2024',
+      Action: <IconDots/>,    
+    },
+    {
+      provider: 'Dr David A',
+      practice: 'Lab Tech',
+      Reason: 'DNA Test',
+      Time: '10:30am',
+      Date: '23/03/2024',
+      Action: <IconDots/>,    
+    },
+    {
+      provider: 'Dr David A',
+      practice: 'Lab Tech',
+      Reason: 'DNA Test',
+      Time: '10:30am',
+      Date: '23/03/2024',
+      Action: <IconDots/>,    
+    },
+    {
+      provider: 'Dr David A',
+      practice: 'Lab Tech',
+      Reason: 'DNA Test',
+      Time: '10:30am',
+      Date: '23/03/2024',
+      Action: <IconDots/>,    
+    },
+    {
+      provider: 'Dr David A',
+      practice: 'Lab Tech',
+      Reason: 'DNA Test',
+      Time: '10:30am',
+      Date: '23/03/2024',
+      Action: <IconDots/>,    
+    },
+    {
+      provider: 'Dr David A',
+      practice: 'Lab Tech',
+      Reason: 'DNA Test',
+      Time: '10:30am',
+      Date: '23/03/2024',
+      Action: <IconDots/>,    
+    },
+    {
+      provider: 'Dr David A',
+      practice: 'Lab Tech',
+      Reason: 'DNA Test',
+      Time: '10:30am',
+      Date: '23/03/2024',
+          
+    }
+    
   
   ];
 
 const BodyDoc = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/patientBio')
+  };
     const rows = data.map((element) => (
         <Table.Tr key={element.provider}>
           <Table.Td fz="18">{element.provider}</Table.Td>
@@ -96,7 +104,16 @@ const BodyDoc = () => {
           <Table.Td fz="18">{element.Reason}</Table.Td>
           <Table.Td fz="18">{element.Time}</Table.Td>
           <Table.Td fz="18">{element.Date}</Table.Td>
-          <Table.Td fz="18">{element.Action}</Table.Td>
+          <Table.Td fz="18">
+              <ActionIcon variant="subtle" color="black" onClick={handleClick}>
+                <IconNote style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
+              </ActionIcon>
+              <ActionIcon variant="subtle" color="black">
+                <IconDownload style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
+              </ActionIcon>
+              
+          
+          </Table.Td>
         </Table.Tr>
       ));
   

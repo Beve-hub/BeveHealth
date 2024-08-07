@@ -8,7 +8,7 @@ const OverViewPro = () => {
         <Container size="xl" my="md">
         <HeaderPro/>
         <BodyPro/>
-    </Container>
+        </Container>
     )
 }
 

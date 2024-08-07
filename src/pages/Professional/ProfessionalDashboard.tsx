@@ -93,7 +93,7 @@ const ProfessionalDashboard = () => {
                   <FiSettings size={24}  color='gray'/>
                   <Text fw="400" fz="20"  color='#121212'>Settings</Text>
                 </a>
-                <a href='/patientLogin' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 50, cursor: 'pointer' , alignItems:'center', }}>
+                <a href='/professionalLogin' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 50, cursor: 'pointer' , alignItems:'center', }}>
                   <FiLogOut size={24} color='gray'/>
                   <Text fw="400" fz="20"  color='#121212'>Log Out</Text>
                 </a>
@@ -108,7 +108,7 @@ const ProfessionalDashboard = () => {
                   <FiSettings size={24}  color='gray'/>
                   <Text fw="400" fz="20"  color='#121212'>Settings</Text>
                 </a>
-                <a href='/patientLogin' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 20, cursor: 'pointer' , alignItems:'center', }}>
+                <a href='/professionalLogin' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 20, cursor: 'pointer' , alignItems:'center', }}>
                   <FiLogOut size={24} color='gray'/>
                   <Text fw="400" fz="20"  color='#121212'>Log Out</Text>
                 </a>

@@ -14,6 +14,7 @@ import AdminDashboard from '../pages/Admin/AdminDashboard';
 import OverviewPatient from '../pages/Patient/screen/overview/OverviewPatient';
 import DocumentPatient from '../pages/Patient/screen/document/DocumentPatient';
 import AppointmentPatient from '../pages/Patient/screen/appointment/AppointmentPatient';
+import PatientBio from '../utilites/reusable/PatientBio';
 
 
 
@@ -38,6 +39,7 @@ const AppRoutes: React.FC = () => {
                 <Route path='/overviewPatient' Component={OverviewPatient} />
                 <Route path='/documentPatient' Component={DocumentPatient} />
                 <Route path='/appointmentPatient' Component={AppointmentPatient} />
+                <Route path='/patientBio' Component={PatientBio} />
             </Routes>
         </Router>
     )
