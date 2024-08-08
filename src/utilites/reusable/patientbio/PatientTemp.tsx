@@ -3,7 +3,9 @@ import { Button , Box, Group, SimpleGrid, Text } from "@mantine/core"
 
 const PatientTemp = () => {
     return (
-        <Box style={{                       
+        <Box 
+        my="40"
+        style={{                       
             height: 'auto',
             background: '#F1F1F1',
             borderRadius: '1rem',
