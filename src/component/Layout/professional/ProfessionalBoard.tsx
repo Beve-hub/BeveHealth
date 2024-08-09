@@ -1,7 +1,7 @@
 
 import { Avatar, Paper, Modal, Group, Box, Text,Button, Image, SimpleGrid,  } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-
+import Img from '../../../assets/professional_img.png'
 
 
 const ProfessionalBoard = () => {
@@ -61,7 +61,7 @@ const ProfessionalBoard = () => {
         </Group>
   
         <Group style={{position:"absolute", right:"40rem"}}>
-          <Image src="/src/assets/professional_img.png" alt="Avatar" style={{width:'20rem'}} />
+          <Image src={Img} alt="Avatar" style={{width:'20rem'}} />
         </Group>
         </Group>
       </Box>

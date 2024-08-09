@@ -49,16 +49,16 @@ const LabReport = () => {
                             <Text fz="18">Dr.David</Text>
                         </Group>
                         <Group display="flex" >
-                            <Text fw="500" fz="18">Report Type :</Text>
-                            <Text fz="18">X-ray scan</Text>
+                            <Text fw="500" fz="16">Report Type :</Text>
+                            <Text fz="16">X-ray scan</Text>
                         </Group>
                         <Group display="flex" justify='space-between'>
                             <Group display="flex">
-                            <Text fw="500" fz="18">Image :</Text>
-                            <Text fz="18">X-ray scan</Text>
+                            <Text fw="500" fz="16">Image :</Text>
+                            <Text fz="16">X-ray scan</Text>
                             </Group>
                             
-                            <Button onClick={openImage} variant='outline' fz="18" >
+                            <Button onClick={openImage} variant='outline' fz="16" >
                                view 
                                 </Button>
                                 <Modal opened={viewImage} onClose={closeImage} centered>
@@ -66,8 +66,8 @@ const LabReport = () => {
                                 </Modal>
                         </Group>
                         <Group  >
-                            <Text fw="500" fz="18">Observation</Text>
-                            <Text fz="18">The heart is healthy and no  signs detected and patient  is in perfect condition</Text>                            
+                            <Text fw="500" fz="16">Observation</Text>
+                            <Text fz="16">The heart is healthy and no  signs detected and patient  is in perfect condition</Text>                            
                         </Group>
                      </Box>
                 </Modal>

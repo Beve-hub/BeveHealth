@@ -4,7 +4,7 @@ interface Props {
     
 }
 
-const Dasboard: React.FC<Props> = () => {
+const Patient: React.FC<Props> = () => {
     return (
         <div>
             
@@ -12,4 +12,4 @@ const Dasboard: React.FC<Props> = () => {
     )
 }
 
-export default Dasboard
+export default Patient

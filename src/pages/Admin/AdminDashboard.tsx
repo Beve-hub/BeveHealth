@@ -3,10 +3,15 @@ import { useState } from 'react';
 import { AppShell, Burger, Image, Group, NavLink, AppShellHeader, Avatar, Text, Box } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { FiLogOut } from "react-icons/fi";
+import Statistics from './screen/Statistics';
+import Document from './screen/Document';
+import Patient from './screen/Patient';
+import Staff from './screen/Staff';
+import OverView from './screen/OverView';
 
 const data = [
   { label: 'OverView', path: '/overView' },
-  { label: 'Doctors', path: '/doctors' },
+  { label: 'Document', path: '/document' },
   { label: 'Patient', path: '/patient' },
   { label: 'Staff', path: '/staff' },
   { label: 'Statistics', path: '/statistics' },
@@ -22,15 +27,15 @@ const AdminDashboard = () => {
     const renderContent = () => {
       switch (activePath) {
         case '/overView':
-          return <div>OverView Content</div>;
-        case '/doctors':
-          return <div>Doctors</div>;
+          return <OverView/>;
+        case '/staff':
+          return <Staff/>;
         case '/patient':
-          return <div>Patient Content</div>;
-          case '/staff':
-            return <div>Staff Content</div>;
+          return <Patient/>;
+          case '/document':
+            return <Document/>;
             case '/statistics':
-          return <div>statistics Content</div>;
+          return <Statistics/>;
         default:
           return <div>Select a section</div>;
       }

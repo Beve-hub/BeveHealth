@@ -3,7 +3,8 @@ import { IconArrowLeft, IconMicrophone, IconPhoto, IconSend, IconVideo } from '@
 import React from 'react'
 import { IoIosCall } from "react-icons/io";
 import { useElementSize,useMediaQuery } from '@mantine/hooks';
-
+import IMG1 from '../../assets/IMG-20231104-WA0014.jpg'
+import IMG2 from '../../assets/IMG-20231125-WA0035(1).jpg'
 
 interface Props {
     
@@ -71,10 +72,10 @@ const ChatField: React.FC<Props> = () => {
                        </Group>
                        
                        <Group justify='flex-start'>
-                            <Image src="/src/assets/IMG-20231104-WA0014.jpg" alt=''  style={{maxHeight:imageHeight, maxWidth:imageWidth}}/>
+                            <Image src={IMG1} alt=''  style={{maxHeight:imageHeight, maxWidth:imageWidth}}/>
                         </Group>                  
                        <Group justify='flex-end'>
-                           <Image src="/src/assets/IMG-20231125-WA0035(1).jpg" alt=''  style={{maxHeight:imageHeight, maxWidth:imageWidth}}/>
+                           <Image src={IMG2}alt=''  style={{maxHeight:imageHeight, maxWidth:imageWidth}}/>
                        </Group>
                        
                         
