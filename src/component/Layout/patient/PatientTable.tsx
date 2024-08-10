@@ -92,11 +92,7 @@ const PatientTable = () => {
       <Table.Tbody fz="18" mt="lg">{rows}</Table.Tbody>
     </Table>
     </ScrollArea>
-    <Pagination
-          onChange={setActivePage}
-          total={Math.ceil(data.length / rowsPerPage)}
-          color='#008C73'
-      />
+   
     </Box>
     )
 }

@@ -9,8 +9,8 @@ const CustomCalendar = () => {
         if (date.getDay() === 5 && date.getDate() === 13) {
           return {
             style: {
-              backgroundColor: 'var(--mantine-color-red-filled)',
-              color: 'var(--mantine-color-white)',
+              backgroundColor: '#008C73',
+              color: '#008C73',
             },
           };
         }
