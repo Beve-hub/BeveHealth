@@ -10,6 +10,6 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true
   },
- "include": ["server/**/*.ts"],
+ "include": ["server/**/*.ts/*.js"],
   "exclude": ["node_modules", "dist"]
 }

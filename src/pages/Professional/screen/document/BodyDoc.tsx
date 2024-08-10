@@ -1,6 +1,7 @@
 
-import { Table, Box, ScrollArea, ActionIcon, rem, } from "@mantine/core"
+import { Table, Box, ScrollArea, ActionIcon, rem, Pagination, } from "@mantine/core"
 import { IconDots, IconDownload, IconNote, } from "@tabler/icons-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -91,13 +92,17 @@ const data = [
   ];
 
 const BodyDoc = () => {
-
   const navigate = useNavigate();
+  const [activePage, setActivePage] = useState(1);
+  const rowsPerPage = 5;
+  
+  const paginationData = data.slice((activePage - 1) * rowsPerPage, activePage * rowsPerPage);
+
 
   const handleClick = () => {
     navigate('/patientBio')
   };
-    const rows = data.map((element) => (
+    const rows =   paginationData.map((element) => (
         <Table.Tr key={element.provider}>
           <Table.Td fz="18">{element.provider}</Table.Td>
           <Table.Td fz="18">{element.practice}</Table.Td>
@@ -141,6 +146,11 @@ const BodyDoc = () => {
       <Table.Tbody fz="18" >{rows}</Table.Tbody>
     </Table>
     </ScrollArea>
+    <Pagination
+          onChange={setActivePage}
+          total={Math.ceil(data.length / rowsPerPage)}
+          color='#008C73'
+      />
     </Box>
         </div>
     )

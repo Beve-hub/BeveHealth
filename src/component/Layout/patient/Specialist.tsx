@@ -7,8 +7,6 @@ const names = [
   'John Doe',
   'Jane Mol',
   'Alex Lump',
-  
-  
 ];
 
 const Specialist = () => {

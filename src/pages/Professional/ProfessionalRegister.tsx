@@ -14,7 +14,7 @@ import { FaTreeCity } from "react-icons/fa6";
 import { MdPhoneEnabled } from "react-icons/md";
 import { GiOfficeChair } from "react-icons/gi";
 import { ImLocation } from "react-icons/im";
-
+import Logo from '../../assets/logo.svg'
 
 
 
@@ -56,7 +56,7 @@ const ProfessionalRegister = () => {
        <Box style={{backgroundColor: '#f5f5f5', padding: isSmallScreen ? '1rem' : '4rem',}}>
         <Box style={{ textAlign: 'center', marginBottom: '2rem',  }}>
           <Image              
-            src='/src/assets/logo.svg'
+            src={Logo}
             alt="beve_Health"
             style={{ width: '12rem' }}                
           />    

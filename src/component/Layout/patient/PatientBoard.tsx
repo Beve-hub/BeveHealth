@@ -3,7 +3,7 @@ import { Textarea,ActionIcon, rem, Modal, Group, Box, Text,Button, Image, Native
 import { useDisclosure } from '@mantine/hooks';
 import { DateInput,TimeInput } from '@mantine/dates';
 import { IconClock } from '@tabler/icons-react';
-
+import Hero from '../../../assets/patient_img.png'
 const PatientBoard = ( ) => {
   const [provider, setProvider] = useState('');
   const [practice, setPractice] = useState('');
@@ -83,7 +83,7 @@ const PatientBoard = ( ) => {
         </Group>
   
         <Group>
-          <Image src="/src/assets/patient_img.png" alt="Avatar" style={{width:'10rem'}} />
+          <Image src={Hero} alt="Avatar" style={{width:'10rem'}} />
         </Group>
         </Group>
       </Box>

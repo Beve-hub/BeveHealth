@@ -1,4 +1,5 @@
-import { Table, Box, ScrollArea, Group, ActionIcon, rem } from '@mantine/core';
+import { Table, Box, ScrollArea, Group, ActionIcon, rem, Pagination } from '@mantine/core';
+import { useState } from 'react';
 import { MdOutlineCheckBox } from "react-icons/md";
 import { MdCancelPresentation } from "react-icons/md";
   
@@ -87,7 +88,12 @@ const data = [
   ];
 
 const BodyPro = () => {
-    const rows = data.map((element) => (
+  const [activePage, setActivePage] = useState(1);
+  const rowsPerPage = 10;
+  
+  const paginationData = data.slice((activePage - 1) * rowsPerPage, activePage * rowsPerPage);
+
+    const rows = paginationData.map((element) => (
         <Table.Tr key={element.provider}>
           <Table.Td fz="18">{element.provider}</Table.Td>
           <Table.Td fz="18">{element.practice}</Table.Td>
@@ -130,6 +136,11 @@ const BodyPro = () => {
           <Table.Tbody fz="18" mt="lg">{rows}</Table.Tbody>
         </Table>
         </ScrollArea>
+        <Pagination
+          onChange={setActivePage}
+          total={Math.ceil(data.length / rowsPerPage)}
+          color='#008C73'
+      />
         </Box>
         </div>  
     )

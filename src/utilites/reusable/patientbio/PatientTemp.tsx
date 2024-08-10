@@ -12,7 +12,7 @@ const PatientTemp = () => {
             borderRadius: '1rem',
             padding: '1rem 2rem',
           }}>
-              <SimpleGrid cols={{base:1, xs:5}} 
+              <SimpleGrid cols={{base:1, sm:1,lg:5}} 
               style={{
                   alignItems: 'center',
               }}>

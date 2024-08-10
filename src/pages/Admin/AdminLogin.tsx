@@ -7,7 +7,8 @@ import CustomInput from '../../utilites/reusable/CustomInput';
 import { IoMdPerson, IoMdLock } from 'react-icons/io';
 import ActionButton from '../../utilites/reusable/ActionButton';
 import { useNavigate } from 'react-router-dom';
-
+import IMG from '../../assets/auth_img2.png'
+import Logo from '../../assets/logo.svg'
 
 interface Props {
     
@@ -39,7 +40,7 @@ const AdminLogin: React.FC<Props> = () => {
     <SimpleGrid cols={isSmallScreen ? 1 : 2} spacing="md" style={{ display: 'grid', justifyContent: 'center', alignItems: 'center' }}>
        <Flex justify='flex-start'  align='center' style={{ height: '100%',width:'100%' }}>
          {!isSmallScreen && <Image 
-            src='/src/assets/auth_img2.png'
+            src={IMG}
             alt="terminal"
             style={{ maxWidth: '100%', height: '60rem', }} 
           />}
@@ -59,7 +60,7 @@ const AdminLogin: React.FC<Props> = () => {
           
           <Box style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <Image
-              src='/src/assets/logo.svg'
+              src={Logo}
               alt="beve_Health"
               style={{ width: '12rem' }}
             />
@@ -90,7 +91,7 @@ const AdminLogin: React.FC<Props> = () => {
                   icon={IoMdLock}
                   iconPosition="right"
                   placeholder="password"
-                  style={{ width: isSmallScreen ? '100%' : '18rem' }}
+                  style={{ width: isSmallScreen ? '17rem' : '18rem' }}
                    label="Password"
                 />
               </Box>

@@ -13,10 +13,10 @@ const GenderCard = () => {
         height: 'auto',
         background: '#F1F1F1',
         borderRadius: '2rem',
-        padding: '1rem 2rem',
+        padding: '1.5rem 2rem',
       }}
     >
-        <Text fz="18" fw="700">Gender</Text>
+        <Text fz="18" fw="700" mb="sm">Gender</Text>
        <Group justify='center'>
        <DonutChart
         data={data}

@@ -1,5 +1,5 @@
 import { useRef,useState } from 'react';
-import { Textarea,ActionIcon, rem, Modal, NativeSelect, TextInput, UnstyledButton,Button, Group,Table, Box, ScrollArea } from "@mantine/core"
+import { Textarea,ActionIcon, rem, Modal,Pagination, NativeSelect, TextInput, UnstyledButton,Button, Group,Table, Box, ScrollArea } from "@mantine/core"
 import { IconClock } from "@tabler/icons-react";
 import { useDisclosure } from '@mantine/hooks';
 import { DateInput,TimeInput } from '@mantine/dates';
@@ -90,7 +90,12 @@ const data = [
 
 
 const BodyApp = () => {
-    const rows = data.map((element) => (
+  const [activePage, setActivePage] = useState(1);
+  const rowsPerPage = 5;
+  
+  const paginationData = data.slice((activePage - 1) * rowsPerPage, activePage * rowsPerPage);
+
+    const rows = paginationData.map((element) => (
         <Table.Tr key={element.provider}>
           <Table.Td fz="18">{element.provider}</Table.Td>
           <Table.Td fz="18">{element.practice}</Table.Td>
@@ -177,6 +182,11 @@ const BodyApp = () => {
       <Table.Tbody fz="18" >{rows}</Table.Tbody>
     </Table>
     </ScrollArea>
+    <Pagination
+          onChange={setActivePage}
+          total={Math.ceil(data.length / rowsPerPage)}
+          color='#008C73'
+      />
     </Box>
         </div>
     )

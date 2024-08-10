@@ -3,13 +3,13 @@ import { Avatar, Box, SimpleGrid, Text } from "@mantine/core"
 
 const PatientData = () => {
     return (
-        <Box my="40" style={{                       
+        <Box my="40" py="30" style={{                       
           height: 'auto',
           background: '#F1F1F1',
           borderRadius: '1rem',
           padding: '1rem 2rem',
         }}>
-            <SimpleGrid cols={{base:1, xs:5}} 
+            <SimpleGrid cols={{base:1, sm:1,lg:5}} 
             style={{
                 alignItems: 'center',
             }}>
