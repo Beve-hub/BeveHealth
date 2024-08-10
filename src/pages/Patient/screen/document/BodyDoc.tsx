@@ -92,14 +92,13 @@ const data = [
         Time: '10:30am',
         Date: '23/03/2024',
         Action: <IconDownload/>,    
-      },
-  
+      },  
   ];
 
 
 const BodyDoc = () => {
   const [activePage, setActivePage] = useState(1);
-  const rowsPerPage = 5;
+  const rowsPerPage = 10;
   
   const paginationData = data.slice((activePage - 1) * rowsPerPage, activePage * rowsPerPage);
 

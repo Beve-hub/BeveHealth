@@ -91,7 +91,7 @@ const data = [
 
 const BodyApp = () => {
   const [activePage, setActivePage] = useState(1);
-  const rowsPerPage = 5;
+  const rowsPerPage = 10;
   
   const paginationData = data.slice((activePage - 1) * rowsPerPage, activePage * rowsPerPage);
 
