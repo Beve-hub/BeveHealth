@@ -1,7 +1,9 @@
 import { SimpleGrid, Image, Flex, Text, Box, } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import CustomButtonFilled from "../utilites/reusable/CustomButtonFilled";
-import { useMediaQuery } from '@mantine/hooks'
+import { useMediaQuery } from '@mantine/hooks';
+import IMG from '../assets/auth_img2.png'
+import Logo from '../assets/logo.svg'
 
 
 const Onboarding = () => {
@@ -20,7 +22,7 @@ const Onboarding = () => {
     <SimpleGrid cols={isSmallScreen ? 1 : 2} spacing="md" style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', }}>
       <Flex justify='flex-start'  align='center' style={{ height: '100%',width:'100%' }}>
          {!isSmallScreen && <Image 
-            src='/src/assets/auth_img2.png'
+            src={IMG}
             alt="terminal"
             style={{ maxWidth: '100%', height: '60rem', }} 
           />}
@@ -38,7 +40,7 @@ const Onboarding = () => {
       <Box style={{backgroundColor: '#f5f5f5', padding: isSmallScreen ? '1rem' : '5rem',  }}>
       <Box style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <Image              
-            src='/src/assets/logo.svg'
+            src={Logo}
             alt="beve_Health"
             style={{ width: '15rem' }}                
           />    
