@@ -1,5 +1,5 @@
 import { useRef,useState } from 'react';
-import { Textarea,ActionIcon,Pagination, rem, Modal, NativeSelect, TextInput, UnstyledButton,Button, Group,Table, Box, ScrollArea } from "@mantine/core"
+import { Textarea,ActionIcon,Pagination, rem, Modal, NativeSelect, TextInput, UnstyledButton,Button, Group,Table, Box, ScrollArea, Paper, Avatar, Text } from "@mantine/core"
 import { IconDownload,IconClock } from "@tabler/icons-react";
 import { useDisclosure } from '@mantine/hooks';
 import { DateInput,TimeInput } from '@mantine/dates';
@@ -103,31 +103,34 @@ const BodyDoc = () => {
   const paginationData = data.slice((activePage - 1) * rowsPerPage, activePage * rowsPerPage);
 
   
-    const rows = paginationData.map((element) => (
-        <Table.Tr key={element.provider}>
-          <Table.Td fz="18">{element.provider}</Table.Td>
-          <Table.Td fz="18">{element.practice}</Table.Td>
-          <Table.Td fz="18">{element.Reason}</Table.Td>
-          <Table.Td fz="18">{element.Time}</Table.Td>
-          <Table.Td fz="18">{element.Date}</Table.Td>
-          <Table.Td fz="18">{element.Action}</Table.Td>
-        </Table.Tr>
-      ));
+    
   const [provider, setProvider] = useState('');
   const [practice, setPractice] = useState('');
   const [date, setDate] = useState<Date | null>(null);
   const ref = useRef<HTMLInputElement>(null);
-  const [opened, { open, close }] = useDisclosure(false);
+  const [opened, { open: openFolder, close: closeFolder }] = useDisclosure(false);
+  const [viewImage, { open: openImage, close: closeImage }] = useDisclosure(false);
   const pickerControl = (
     <ActionIcon variant="subtle" color="gray" onClick={() => ref.current?.showPicker()}>
       <IconClock style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
     </ActionIcon>
   );
+
+  const rows = paginationData.map((element) => (
+    <Table.Tr key={element.provider}>
+      <Table.Td onClick={openImage} fz="18" style={{cursor: "pointer" }}>{element.provider}</Table.Td>
+      <Table.Td fz="18">{element.practice}</Table.Td>
+      <Table.Td fz="18">{element.Reason}</Table.Td>
+      <Table.Td fz="18">{element.Time}</Table.Td>
+      <Table.Td fz="18">{element.Date}</Table.Td>
+      <Table.Td fz="18"><ActionIcon variant='transparent' color='black'>{element.Action}</ActionIcon> </Table.Td>
+    </Table.Tr>
+  ));
     return (
         <div>
             <Group my="50" justify="flex-end">
-                <Button  onClick={open} size="md" color="#008C73">Book Session</Button>
-                <Modal opened={opened} onClose={close} title="Schedule Appointment" centered>
+                <Button  onClick={openFolder} size="md" color="#008C73">Book Session</Button>
+                <Modal opened={opened} onClose={closeFolder} title="Schedule Appointment" centered>
         <form>
         <TextInput
           label="Provider"
@@ -195,6 +198,27 @@ const BodyDoc = () => {
           total={Math.ceil(data.length / rowsPerPage)}
           color='#008C73'
       />
+       <Modal opened={viewImage} onClose={closeImage} title="Doctor info" centered>
+        <Paper radius="md" withBorder p="lg" bg="var(--mantine-color-body)">
+      <Avatar
+        src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png"
+        size={120}
+        radius={120}
+        mx="auto"
+      />
+      <Text ta="center" fz="lg" fw={500} >
+      Victor Okeke
+      </Text>
+     
+      <Text ta="center" c="dimmed" fz="sm">
+        surgeon
+      </Text>
+      <Group justify='center' mt="20">
+      <Button variant='filled' color='#019379' >Send a Message</Button>
+      </Group> 
+      
+          </Paper>
+      </Modal>
     </Box>
         </div>
     )

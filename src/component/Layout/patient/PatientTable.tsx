@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Table, Box, Pagination,ScrollArea } from '@mantine/core';
-
+import { Text, Avatar, Paper, Modal, Table, Box, ScrollArea, Button, Group } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 
 const data = [
     {
@@ -56,12 +56,12 @@ const data = [
 const PatientTable = () => {
   const [activePage, setActivePage] = useState(1);
   const rowsPerPage = 5;
-  
+  const [opened, { open, close }] = useDisclosure(false);
   const paginationData = data.slice((activePage - 1) * rowsPerPage, activePage * rowsPerPage);
 
     const rows = paginationData.map((element) => (
         <Table.Tr key={element.provider}>
-          <Table.Td fz="18">{element.provider}</Table.Td>
+          <Table.Td onClick={open} fz="18" style={{cursor: "pointer" }}>{element.provider}</Table.Td>
           <Table.Td fz="18">{element.practice}</Table.Td>
           <Table.Td fz="18">{element.Reason}</Table.Td>
           <Table.Td fz="18">{element.Time}</Table.Td>
@@ -92,7 +92,27 @@ const PatientTable = () => {
       <Table.Tbody fz="18" mt="lg">{rows}</Table.Tbody>
     </Table>
     </ScrollArea>
-   
+    <Modal opened={opened} onClose={close} title="Doctor info" centered>
+        <Paper radius="md" withBorder p="lg" bg="var(--mantine-color-body)">
+      <Avatar
+        src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png"
+        size={120}
+        radius={120}
+        mx="auto"
+      />
+      <Text ta="center" fz="lg" fw={500} >
+      Victor Okeke
+      </Text>
+     
+      <Text ta="center" c="dimmed" fz="sm">
+       surgeon
+      </Text>
+      <Group justify='center' mt="20">
+      <Button variant='filled' color='#019379' >Send a Message</Button>
+      </Group> 
+      
+          </Paper>
+      </Modal>
     </Box>
     )
 }

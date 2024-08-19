@@ -1,4 +1,4 @@
-import { Box, Checkbox, Flex, Image, SimpleGrid, Text, Transition } from '@mantine/core';
+import { Box, Checkbox, Flex, Group, Image, SimpleGrid, Text, Transition } from '@mantine/core';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { login } from '../../redux/slices/authSlice';
@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { RiShieldUserFill } from "react-icons/ri";
 import IMG from '../../assets/auth_img2.png'
 import Logo from '../../assets/logo.svg'
+import { MdKeyboardDoubleArrowRight, MdKeyboardDoubleArrowLeft } from "react-icons/md";
 
 const ProfessionalLogin = () => {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
@@ -31,6 +32,7 @@ const ProfessionalLogin = () => {
 
   const handleForget = () => navigate('/forgottenPassword');
   const handleReg = () => navigate('/professionalRegister');
+  const handleNurse = () => navigate('/nurseRegister');
   const handleAdmin = () => navigate('/adminLogin');
 
   return (
@@ -135,6 +137,11 @@ const ProfessionalLogin = () => {
                 {loading ? 'Loading...' : 'Submit'}
               </ActionButton>
               <Text style={{ fontSize: 15 }}>Don't have an account? <span onClick={handleReg} style={{ fontWeight: 'bold', color: '#008C73', cursor: 'pointer' }}>Register</span></Text>
+              <Group display="flex" justify="flex-end" style={{  alignItems:'center' }}>
+              <Text style={{ fontSize: 15, alignItems:'center' }}>Are you a Nurse?</Text>
+              <span onClick={handleNurse} style={{ fontWeight: 'bold', color: '#008C73', cursor: 'pointer' }}><MdKeyboardDoubleArrowRight size={24} /></span>
+              </Group>
+              
             </form>
           </Box>
         </Box>

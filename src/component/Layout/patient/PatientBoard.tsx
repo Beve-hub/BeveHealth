@@ -33,7 +33,7 @@ const PatientBoard = ( ) => {
           Welcome,  
         </Text>
         <Text fw="bold" fz="30">
-          Dr.Victor Okeke
+         Victor Okeke
         </Text>
         <Text  >
           Your health is our Priority,  stay alive
@@ -53,7 +53,7 @@ const PatientBoard = ( ) => {
           label="Practice"
           value={practice}
           onChange={(event) => setPractice(event.currentTarget.value)}
-          data={['Surgeon', 'Radiographer', 'Pediatrics', 'Dentist', 'Pharmacist']}
+          data={['General doctor','Surgeon', 'Radiographer', 'Pediatrics', 'Dentist', 'Pharmacist']}
         />
         <DateInput       
       value={date}
@@ -82,7 +82,7 @@ const PatientBoard = ( ) => {
       </Modal>
         </Group>
   
-        <Group>
+        <Group style={{position:"absolute", right:"45rem"}}>
           <Image src={Hero} alt="Avatar" style={{width:'10rem'}} />
         </Group>
         </Group>

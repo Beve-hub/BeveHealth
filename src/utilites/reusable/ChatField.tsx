@@ -42,7 +42,7 @@ const ChatField: React.FC<Props> = () => {
             </Box>
             </div>
             <div style={{margin:'0 3rem'}}>
-                <ScrollArea h="57vh" type="scroll" scrollbarSize={1} py={20}>
+                <ScrollArea h="55vh" type="scroll" scrollbarSize={1} py={5}>
                     <Box>   
                         <Group justify='flex-start'>
                         <Text style={{
@@ -87,7 +87,7 @@ const ChatField: React.FC<Props> = () => {
             <div >
             <Box style={{padding:'1rem 3rem', display:'flex', justifyContent:'space-between', alignContent:'center'}}>
                 
-                <Group style={{backgroundColor:'#12121210', borderRadius:20,padding:'0.2rem 2rem'}}>
+                <Group style={{backgroundColor:'#12121210', borderRadius:20, padding:'0.2rem 2rem'}}>
                 <Textarea   
                    variant="unstyled" 
                    size="md"           

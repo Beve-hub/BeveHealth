@@ -11,7 +11,7 @@ const PatientBio = () => {
         navigate('/adminDashboard')
     }
     return (
-        <Container size="xl" my="md">
+        <Container size="xl" mt="lg">
             <Group display="flex" onClick={handleClick} style={{alignContent:'center', cursor:'pointer'}} >
             <MdOutlineKeyboardArrowLeft size={30} />
             <Text fz="24" fw="700" my="40">Log Book</Text>

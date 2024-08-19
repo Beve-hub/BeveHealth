@@ -19,7 +19,7 @@ const Onboarding = () => {
   };
 
   return (
-    <SimpleGrid cols={isSmallScreen ? 1 : 2} spacing="md" style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', }}>
+    <SimpleGrid cols={isSmallScreen ? 1 :  2} spacing="md" style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', }}>
       <Flex justify='flex-start'  align='center' style={{ height: '100%',width:'100%' }}>
          {!isSmallScreen && <Image 
             src={IMG}

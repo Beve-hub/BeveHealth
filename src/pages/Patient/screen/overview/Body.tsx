@@ -25,7 +25,7 @@ const Body = () => {
          </Grid>    
        
    
-        <SimpleGrid cols={{base:1, xs:3}} my="lg">
+        <SimpleGrid cols={{base:1, sm:1, lg:3}} my="lg">
           <div >
           <Document/>
           </div>

@@ -27,10 +27,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/professionalLogin" Component={ProfessionalLogin} />
         <Route path="/adminLogin" Component={AdminLogin} />
         <Route path="/patientDashboard" Component={PatientDashboard} />
-        <Route
-          path="/professionalDashboard"
-          Component={ProfessionalDashboard}
-        />
+        <Route path="/professionalDashboard" Component={ProfessionalDashboard} />
         <Route path="/adminDashboard" Component={AdminDashboard} />
         <Route path="/professionalRegister" Component={ProfessionalRegister} />
         <Route path="/patientRegister" Component={PatientRegister} />

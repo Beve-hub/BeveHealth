@@ -39,11 +39,12 @@ const ProfessionalBoard = () => {
         radius={120}
         mx="auto"
       />
-      <Text ta="center" fz="lg" fw={500} mt="md">
+      <Text ta="center" fz="lg" fw={500} >
       Victor Okeke
       </Text>
+     
       <Text ta="center" c="dimmed" fz="sm">
-      VictorOkeke@gmail.com  • surgeon
+       BHD02244 • VictorOkeke@gmail.com  • surgeon
       </Text>
 
       <SimpleGrid cols={2}  my="md">    
