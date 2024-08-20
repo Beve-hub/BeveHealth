@@ -6,7 +6,7 @@ const MessagePro = () => {
     return (
         <Container size="xl" my="md">       
         <BodyMes/>
-    </Container>
+       </Container>
     )
 }
 

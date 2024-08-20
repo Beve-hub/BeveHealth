@@ -13,7 +13,7 @@ const Members = () => {
             borderRadius: '2rem',
             padding: '1.5rem 2rem',
           }}>
-            <Text fz="18" fw="700" mb="20">Member History</Text>
+            <Text fz="18" fw="700" >Member History</Text>
             <Group justify='center'>
        <PieChart
         data={MemberData}
