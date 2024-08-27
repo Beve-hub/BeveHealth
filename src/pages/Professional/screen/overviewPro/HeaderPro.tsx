@@ -9,12 +9,12 @@ const HeaderPro = () => {
     const [search, setSearch] = useState('');
       return (
           <Group display="flex" justify='space-between' >
-              <Text fz="30" fw="600">Overview</Text>
+              <Text fz="25" fw="600">Overview</Text>
   
   
               { isSmallScreen && (<Group >
               <TextInput
-              size="md"
+              size="sm"
                 placeholder="Search..."
                 value={search}
                 onChange={(event) => setSearch(event.currentTarget.value)}
@@ -22,16 +22,16 @@ const HeaderPro = () => {
               />
   
               <Group>
-              <ActionIcon variant="filled" color="#12121210"  size="xl" radius="xl">
-               <IoNotificationsOutline  size={30} color='#121212' />
+              <ActionIcon variant="filled" color="#12121210"  size="lg" radius="xl">
+               <IoNotificationsOutline  size={24} color='#121212' />
               </ActionIcon>
               </Group>
               
   
                   <UnstyledButton display="grid">
                   <Group >
-                    <Avatar size="lg" src="/src/assets/user.png" alt="user" />
-                    <Text fw="400" fz="20" ml="2">User Name</Text>                 
+                    <Avatar size="md" src="/src/assets/user.png" alt="user" />
+                    <Text fw="400" fz="16" >User Name</Text>                 
                     </Group>                  
                   </UnstyledButton>   
                                

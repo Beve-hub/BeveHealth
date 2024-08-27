@@ -14,10 +14,10 @@ const AnalyticsCard = () => {
           padding: '2rem 2rem',
         }}
         >
-            <Text fz="18" fw="500" mb="lg">Analytics</Text>
+            <Text fz="18" fw="500" mb="md">Analytics</Text>
             <Group>
             <BarChart
-      h={225}
+      h={200}
       data={dataAnalysis}
       dataKey="day"
       series={[{ name: 'Patient', color: '#008C73' }]}

@@ -41,9 +41,9 @@ const PatientDashboard = () => {
 
   return (
     <AppShell
-      header={{ height: 80 }}
+      header={{ height: 60 }}
       navbar={{        
-        width: 300,
+        width: 230,
         breakpoint: 'sm',
         collapsed: { mobile: !opened },
       }}
@@ -52,7 +52,7 @@ const PatientDashboard = () => {
       <AppShellHeader withBorder={false} pt="md">
         <Group px="md">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Image src="/src/assets/logo.svg" alt='' />
+          <Image src="/src/assets/logo.svg" alt='' width={50} height={50}/>
         </Group>
       </AppShellHeader>
         
@@ -61,14 +61,14 @@ const PatientDashboard = () => {
           {data.map((item, index) => (
             <NavLink
               key={index}
-              label={<span style={{ display: 'flex', justifyContent: 'flex-end', fontSize: '20px', fontWeight: 500 }}>{item.label}</span>}
+              label={<span style={{ display: 'flex', justifyContent: 'flex-end', fontSize: '18px', fontWeight: 500 }}>{item.label}</span>}
               onClick={() => setActivePath(item.path)}
               active={activePath === item.path}
               style={{ 
                 cursor: 'pointer', 
                 backgroundColor: activePath === item.path ? "#008C73" : 'transparent',
                 color: activePath === item.path ? "white" : '#333',
-                padding: '10px 20px',
+                padding: '6px 15px',
                 borderRadius: '0px 30px 30px 0',
                 transition: 'background-color 0.3s ease, color 0.3s ease',
                 textDecoration: 'none',
@@ -82,15 +82,15 @@ const PatientDashboard = () => {
               <Group display="flex" mt="auto" style={{ width: '100%' }}>
                 <a style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 20, cursor: 'pointer', alignItems:'center',  }}>
                   <FaRegCircleUser size={24}  color='gray'/>
-                  <Text fw="400" fz="20" >User Name</Text>
+                  <Text fw="400" fz="16" >User Name</Text>
                 </a>
                 <a  href='/settings' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 50, cursor: 'pointer', alignItems:'center',  }}>
                   <FiSettings size={24}  color='gray'/>
-                  <Text fw="400" fz="20"  color='#121212'>Settings</Text>
+                  <Text fw="400" fz="16"  color='#121212'>Settings</Text>
                 </a>
                 <a href='/patientLogin' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 50, cursor: 'pointer' , alignItems:'center', }}>
                   <FiLogOut size={24} color='gray'/>
-                  <Text fw="400" fz="20"  color='#121212'>Log Out</Text>
+                  <Text fw="400" fz="16"  color='#121212'>Log Out</Text>
                 </a>
                 
               </Group>
@@ -101,11 +101,11 @@ const PatientDashboard = () => {
               <Group display="flex" mt="auto" style={{ width: '100%' }}>
                 <a  href='/settings' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 20, cursor: 'pointer', alignItems:'center',  }}>
                   <FiSettings size={24}  color='gray'/>
-                  <Text fw="400" fz="20"  color='#121212'>Settings</Text>
+                  <Text fw="400" fz="16"  color='#121212'>Settings</Text>
                 </a>
                 <a href='/patientLogin' style={{ display: 'flex', gap: 10, textDecoration: 'none', justifyContent: 'center', width: '100%', marginRight: 20, cursor: 'pointer' , alignItems:'center', }}>
                   <FiLogOut size={24} color='gray'/>
-                  <Text fw="400" fz="20"  color='#121212'>Log Out</Text>
+                  <Text fw="400" fz="16"  color='#121212'>Log Out</Text>
                 </a>
               </Group>
             </Box>

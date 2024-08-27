@@ -7,7 +7,7 @@ import BodyChart from "./BodyChart"
 
 const ChartPro = () => {
     return (
-        <Container size="xl" my="md">
+        <Container size="lg" my="md">
             <HeaderChart/>
             <BodyChart/>
         </Container>

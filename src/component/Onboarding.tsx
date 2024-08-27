@@ -24,7 +24,7 @@ const Onboarding = () => {
          {!isSmallScreen && <Image 
             src={IMG}
             alt="terminal"
-            style={{ maxWidth: '100%', height: '60rem', }} 
+            style={{ maxWidth: '100%', height: '45rem', }} 
           />}
       </Flex>
       <Box

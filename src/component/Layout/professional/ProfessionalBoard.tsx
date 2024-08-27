@@ -14,7 +14,7 @@ const ProfessionalBoard = () => {
           height: 'auto',
           background: 'linear-gradient(90deg, #4ECBB480, #01937965,gray)',
           borderRadius: '1rem',
-          padding: '2rem 2rem',
+          padding: '1rem 2rem',
         }}
       >
         <Group justify='space-between'>
@@ -61,8 +61,8 @@ const ProfessionalBoard = () => {
       </Modal>
         </Group>
   
-        <Group style={{position:"absolute", right:"40rem"}}>
-          <Image src={Img} alt="Avatar" style={{width:'15rem'}} />
+        <Group style={{position:"absolute", right:"30rem"}}>
+          <Image src={Img} alt="Avatar" style={{width:'13rem'}} />
         </Group>
         </Group>
       </Box>

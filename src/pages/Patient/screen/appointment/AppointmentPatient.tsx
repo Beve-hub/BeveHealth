@@ -7,7 +7,7 @@ import BodyApp from './BodyApp';
 
 const AppointmentPatient = () => {
     return (
-        <Container size="xl" my="md">
+        <Container size="lg" my="md">
         <HeaderApp/>
         <BodyApp/>
     </Container>

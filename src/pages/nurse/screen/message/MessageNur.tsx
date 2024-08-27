@@ -1,9 +1,10 @@
-
+import {Container, } from '@mantine/core';
+import BodyNur from './BodyNur';
 const MessageNur = () => {
     return (
-        <div>
-            
-        </div>
+        <Container size="xl" my="md">
+            <BodyNur/>
+        </Container>
     )
 }
 

@@ -4,7 +4,7 @@ import BodyAd from "./BodyAd"
 
 const AppointmentAd = () => {
     return (
-        <Container size="xl" my="md">
+        <Container size="lg" my="md">
         <HeaderAd/>
         <BodyAd/>
          </Container>

@@ -6,7 +6,7 @@ import BodyStaff from "./BodyStaff"
 
 const Staff = () => {
     return (
-        <Container size="xl" my="md">
+        <Container size="lg" my="md">
             <HeaderStaff/>
             <BodyStaff/>
         </Container>

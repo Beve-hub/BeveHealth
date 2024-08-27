@@ -5,12 +5,12 @@ import { useMediaQuery,} from '@mantine/hooks';
 
 
 
-const HeaderDoc = () => {
+const HeaderNur = () => {
     const isSmallScreen = useMediaQuery('(min-width: 768px)');
     const [search, setSearch] = useState('');
       return (
           <Group display="flex" justify='space-between' >
-          <Text fz="25" fw="600">Document</Text>
+          <Text fz="25" fw="600">Appointment</Text>
   
   
           { isSmallScreen && (<Group >
@@ -44,4 +44,4 @@ const HeaderDoc = () => {
       )
 }
 
-export default HeaderDoc
+export default HeaderNur

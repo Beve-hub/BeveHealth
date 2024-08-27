@@ -54,16 +54,16 @@ const ProTable = () => {
 
   const rows = paginationData.map((element) => (
     <Table.Tr key={element.patient}>
-      <Table.Td onClick={open} fz="18" style={{cursor: "pointer" }}>{element.patient}</Table.Td>
-      <Table.Td fz="18">{element.Reason}</Table.Td>
-      <Table.Td fz="18">{element.Time}</Table.Td>
-      <Table.Td fz="18">{element.Date}</Table.Td>
-      <Table.Td fz="18">{element.Status ? (<Group>
+      <Table.Td onClick={open} fz="14" style={{cursor: "pointer" }}>{element.patient}</Table.Td>
+      <Table.Td fz="14">{element.Reason}</Table.Td>
+      <Table.Td fz="14">{element.Time}</Table.Td>
+      <Table.Td fz="14">{element.Date}</Table.Td>
+      <Table.Td fz="14">{element.Status ? (<Group>
         <ActionIcon variant="subtle" color="gray">
-            <MdOutlineCheckBox style={{ width: rem(24), height: rem(24) }} color='#008C73' />
+            <MdOutlineCheckBox style={{ width: rem(22), height: rem(22) }} color='#008C73' />
           </ActionIcon>
           <ActionIcon variant="subtle" color="gray">
-                <MdCancelPresentation style={{ width: rem(24), height: rem(24) }} color='#FF0000' />
+                <MdCancelPresentation style={{ width: rem(22), height: rem(22) }} color='#FF0000' />
               </ActionIcon>
       </Group>) : (<Group>
         
@@ -76,20 +76,20 @@ const ProTable = () => {
         height: 'auto',
         background: '#F1F1F1',
         borderRadius: '1rem',
-        padding: '1rem 2rem',
+        padding: '1rem 1rem',
       }}>
-        <ScrollArea  h={300}>
-        <Table miw={700}>
+        <ScrollArea  h={280}>
+        <Table miw={600}>
       <Table.Thead  >
         <Table.Tr my='lg'>
-          <Table.Th fz="18">Patient</Table.Th>
-          <Table.Th fz="18">Reason</Table.Th>
-          <Table.Th fz="18">Time</Table.Th>
-          <Table.Th fz="18">Date</Table.Th>
-          <Table.Th fz="18">Status</Table.Th>
+          <Table.Th fz="16">Patient</Table.Th>
+          <Table.Th fz="16">Reason</Table.Th>
+          <Table.Th fz="16">Time</Table.Th>
+          <Table.Th fz="16">Date</Table.Th>
+          <Table.Th fz="16">Status</Table.Th>
         </Table.Tr>
       </Table.Thead>
-      <Table.Tbody fz="18" mt="lg">{rows}</Table.Tbody>
+      <Table.Tbody fz="16" >{rows}</Table.Tbody>
     </Table>
     </ScrollArea>   
     <Modal opened={opened} onClose={close} title="Doctor info" centered>

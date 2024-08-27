@@ -1,14 +1,46 @@
-import React from 'react'
+import { useState } from 'react';
+import {TextInput ,ActionIcon, UnstyledButton,Avatar, Group,Text, } from '@mantine/core';
+import { IoNotificationsOutline } from "react-icons/io5";
+import { useMediaQuery,} from '@mantine/hooks';
 
-interface Props {
-    
-}
 
-const HeaderNur: React.FC<Props> = () => {
+
+const HeaderNur = () => {
+    const isSmallScreen = useMediaQuery('(min-width: 768px)');
+  const [search, setSearch] = useState('');
     return (
-        <div>
-            
-        </div>
+        <Group display="flex" justify='space-between' >
+        <Text fz="25" fw="600">Overview</Text>
+
+
+        { isSmallScreen && (<Group >
+        <TextInput
+        size="sm"
+          placeholder="Search..."
+          value={search}
+          onChange={(event) => setSearch(event.currentTarget.value)}
+          radius="xl"
+        />
+
+        <Group>
+        <ActionIcon variant="filled" color="#12121210"  size="lg" radius="xl">
+         <IoNotificationsOutline  size={24} color='#121212' />
+        </ActionIcon>
+        </Group>
+        
+
+            <UnstyledButton display="grid">
+            <Group >
+              <Avatar size="md" src="/src/assets/user.png" alt="user" />
+              <Text fw="400" fz="16" >User Name</Text>                 
+              </Group>                  
+            </UnstyledButton>   
+                         
+        </Group>
+        
+    )}
+        
+    </Group>
     )
 }
 

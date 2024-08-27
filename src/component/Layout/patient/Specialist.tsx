@@ -22,13 +22,13 @@ const Specialist = () => {
         }}
       >
         <Group justify='space-between'>
-        <Text fz="20" fw="bold">Specialist</Text>
+        <Text fz="18" fw="bold">Specialist</Text>
         <UnstyledButton style={{display:'flex', alignItems:'center', gap:10}}> <Text color="#006250" >view All </Text> <MdKeyboardArrowRight size={20} /> </UnstyledButton>
         </Group>
   
         <Group justify='space-between' my="md" style={{borderBottom:"2px solid #12121250", paddingBottom:10}}>
           <Group>          
-          <Text fz="18">Surgeon</Text>
+          <Text fz="16">Surgeon</Text>
           </Group>  
           <Group>
           <Group gap={-40}>{avatars}</Group>
@@ -38,7 +38,7 @@ const Specialist = () => {
         </Group>
         <Group justify='space-between' my="xs" style={{borderBottom:"2px solid #12121250", paddingBottom:10}}>
           <Group>          
-          <Text fz="18">Radiographer</Text>
+          <Text fz="16">Radiographer</Text>
           </Group>  
           <Group>
           <Group gap={-40}>{avatars}</Group>
@@ -48,7 +48,7 @@ const Specialist = () => {
         </Group>
         <Group justify='space-between' my="lg" style={{borderBottom:"2px solid #12121250", paddingBottom:10}}>
           <Group>          
-          <Text fz="18">Optician</Text>
+          <Text fz="16">Optician</Text>
           </Group>  
           <Group>
           <Group gap={-40}>{avatars}</Group>

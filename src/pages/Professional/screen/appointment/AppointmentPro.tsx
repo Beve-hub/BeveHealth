@@ -5,7 +5,7 @@ import HeaderPro from "./HeaderPro"
 
 const AppointmentPro = () => {
     return (
-        <Container size="xl" my="md">
+        <Container size="lg" my="md">
             <HeaderPro />
             <BodyPro />
         </Container>

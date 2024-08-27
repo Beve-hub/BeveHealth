@@ -17,6 +17,12 @@ import AppointmentPatient from "../pages/Patient/screen/appointment/AppointmentP
 import PatientBio from "../utilites/reusable/PatientBio";
 import DoctorDetails from "../pages/Admin/screen/staff/DoctorDetails";
 import MedicaDetails from "../utilites/reusable/medicalbio/MedicaDetails";
+import NurseRegister from "@/pages/nurse/NurseRegister";
+import NurseLogin from "@/pages/nurse/NurseLogin";
+import NurseDashboard from "@/pages/nurse/NurseDashboard";
+import PatBioData from "@/component/Layout/nurse/PatBioData";
+
+
 
 const AppRoutes: React.FC = () => {
   return (
@@ -31,6 +37,9 @@ const AppRoutes: React.FC = () => {
         <Route path="/adminDashboard" Component={AdminDashboard} />
         <Route path="/professionalRegister" Component={ProfessionalRegister} />
         <Route path="/patientRegister" Component={PatientRegister} />
+        <Route path="/nurseRegister" Component={NurseRegister} />
+        <Route path="/nurseLogin" Component={NurseLogin} />
+        <Route path="/nurseDashboard" Component={NurseDashboard} />
         <Route path="/adminRegister" Component={AdminRegister} />
         <Route path="/forgottenPassword" Component={ForgottenPassword} />
         <Route path="/overviewPatient" Component={OverviewPatient} />
@@ -39,6 +48,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/patientBio" Component={PatientBio} />
         <Route path="/doctorDetails" Component={DoctorDetails} />
         <Route path="/medicalDetails" Component={MedicaDetails} />
+        <Route path="/patBioData" Component={PatBioData} />
       </Routes>
     </Router>
   );

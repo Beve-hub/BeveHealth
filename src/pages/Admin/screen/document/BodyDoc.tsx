@@ -140,18 +140,18 @@ const BodyDoc = () => {
     
     const rows = paginationData.map((element) => (
           <Table.Tr key={element.provider}>
-            <Table.Td onClick={openDocFolder} fz="18" style={{cursor: "pointer" }}>{element.provider}</Table.Td>
-            <Table.Td fz="18">{element.practice}</Table.Td>
-            <Table.Td onClick={openPatFolder} fz="18" style={{cursor: "pointer" }}>{element.patient}</Table.Td>
-            <Table.Td fz="18">{element.Reason}</Table.Td>
-            <Table.Td fz="18">{element.Time}</Table.Td>
-            <Table.Td fz="18">{element.Date}</Table.Td>
-            <Table.Td fz="18">
+            <Table.Td onClick={openDocFolder} fz="16" style={{cursor: "pointer" }}>{element.provider}</Table.Td>
+            <Table.Td fz="16">{element.practice}</Table.Td>
+            <Table.Td onClick={openPatFolder} fz="16" style={{cursor: "pointer" }}>{element.patient}</Table.Td>
+            <Table.Td fz="16">{element.Reason}</Table.Td>
+            <Table.Td fz="16">{element.Time}</Table.Td>
+            <Table.Td fz="16">{element.Date}</Table.Td>
+            <Table.Td fz="16">
                 <ActionIcon variant="subtle" color="black" onClick={handleClick}>
-                  <IconNote style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
+                  <IconNote style={{ width: rem(22), height: rem(22) }} stroke={1.5} />
                 </ActionIcon>
                 <ActionIcon variant="subtle" color="black">
-                  <IconDownload style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
+                  <IconDownload style={{ width: rem(22), height: rem(22) }} stroke={1.5} />
                 </ActionIcon>
                 
             
@@ -161,24 +161,24 @@ const BodyDoc = () => {
     
       return (
           <div> 
-              <Box mt="100" style={{    
+              <Box mt="80" style={{    
           maxWidth:'100%',
           height: 'auto',
           background: '#F1F1F1',
           borderRadius: '1rem',
-          padding: '2rem 2rem',
+          padding: '1rem 2rem',
         }}>
           <ScrollArea   >
-          <Table miw={700} horizontalSpacing="xl" verticalSpacing="sm">
+          <Table miw={600} horizontalSpacing="xl" verticalSpacing="sm">
         <Table.Thead  >
           <Table.Tr mb='lg'>
-            <Table.Th fz="20">Provider</Table.Th>
-            <Table.Th fz="20">Practice</Table.Th>
-            <Table.Th fz="20">Patient</Table.Th>
-            <Table.Th fz="20">Reason</Table.Th>
-            <Table.Th fz="20">Time</Table.Th>
-            <Table.Th fz="20">Date</Table.Th>
-            <Table.Th fz="20">Action</Table.Th>
+            <Table.Th fz="18">Provider</Table.Th>
+            <Table.Th fz="18">Practice</Table.Th>
+            <Table.Th fz="18">Patient</Table.Th>
+            <Table.Th fz="18">Reason</Table.Th>
+            <Table.Th fz="18">Time</Table.Th>
+            <Table.Th fz="18">Date</Table.Th>
+            <Table.Th fz="18">Action</Table.Th>
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody fz="18" >{rows}</Table.Tbody>

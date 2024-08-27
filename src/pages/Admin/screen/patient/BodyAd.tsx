@@ -128,11 +128,11 @@ const BodyAd = () => {
   }
     const rows = paginationData.map((element) => (
         <Table.Tr key={element.provider}>
-          <Table.Td onClick={openPatFolder} fz="18" style={{cursor: "pointer" }}>{element.patient}</Table.Td>
-          <Table.Td fz="18">{element.Reason}</Table.Td>
-          <Table.Td fz="18">{element.Time}</Table.Td>
-          <Table.Td fz="18">{element.Date}</Table.Td>
-          <Table.Td fz="18">{element.Status ? (<Group>
+          <Table.Td onClick={openPatFolder} fz="16" style={{cursor: "pointer" }}>{element.patient}</Table.Td>
+          <Table.Td fz="16">{element.Reason}</Table.Td>
+          <Table.Td fz="16">{element.Time}</Table.Td>
+          <Table.Td fz="16">{element.Date}</Table.Td>
+          <Table.Td fz="16">{element.Status ? (<Group>
             <Menu
             transitionProps={{ transition: 'pop' }}
             withArrow
@@ -181,17 +181,17 @@ const BodyAd = () => {
             padding: '2rem 3rem',                    
           }}>
             <ScrollArea  >
-            <Table miw={700} verticalSpacing="sm">
+            <Table miw={600} verticalSpacing="sm">
           <Table.Thead  >
             <Table.Tr my='lg'>
-              <Table.Th fz="18">Patient</Table.Th>
-              <Table.Th fz="18">Reason</Table.Th>
-              <Table.Th fz="18">Time</Table.Th>
-              <Table.Th fz="18">Date</Table.Th>
-              <Table.Th fz="18">Status</Table.Th>
+              <Table.Th fz="16">Patient</Table.Th>
+              <Table.Th fz="16">Reason</Table.Th>
+              <Table.Th fz="16">Time</Table.Th>
+              <Table.Th fz="16">Date</Table.Th>
+              <Table.Th fz="16">Status</Table.Th>
             </Table.Tr>
           </Table.Thead>
-          <Table.Tbody fz="18" mt="lg">{rows}</Table.Tbody>
+          <Table.Tbody fz="16" mt="lg">{rows}</Table.Tbody>
         </Table>
         </ScrollArea>
         <Pagination

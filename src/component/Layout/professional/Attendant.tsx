@@ -12,10 +12,10 @@ const Attendant = () => {
             height: 'auto',
             background: '#F1F1F1',
             borderRadius: '2rem',
-            padding: '2rem 2rem',
+            padding: '1rem 2rem',
           }}>
 
-            <Text fz="20" fw="600" mb="20">Attended Appointment</Text>
+            <Text fz="20" fw="600" mb="10">Attended Appointment</Text>
             <Card my='20'>
         <Text fz="xs" tt="uppercase" fw={700} className={classes.title}>
         New Patient (2/10)

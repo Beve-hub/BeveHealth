@@ -14,7 +14,7 @@ import PatientProfile from '../../../../component/Layout/patient/PatientProfile'
 const Body = () => {  
 
     return (
-      <div  style={{ marginTop:100}}>
+      <div  style={{ marginTop:80}}>
           <Grid my="md" gutter="lg">
           <Grid.Col span={{base:12, xs:8}}>
           <PatientBoard/>

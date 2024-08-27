@@ -41,7 +41,7 @@ const ProfessionalLogin = () => {
          {!isSmallScreen && <Image 
             src={IMG}
             alt="terminal"
-            style={{ maxWidth: '100%', height: '60rem', }} 
+            style={{ maxWidth: '100%', height: '45rem', }} 
           />}
       </Flex>
       <Box
@@ -89,7 +89,7 @@ const ProfessionalLogin = () => {
               alt="beve_Health"
               style={{ width: '12rem' }}
             />
-            <Box style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', marginBottom: '2rem', marginTop: '2rem' }}>
+            <Box style={{ display: 'grid', justifyContent: 'center', alignItems: 'center',  marginTop: '2rem' }}>
               <Box style={{ display: 'grid', justifyContent: 'flex-start', alignItems: 'flex-start' }}>
                 <Text style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>Welcome, back</Text>
                 <Text style={{ fontWeight: 'normal', fontSize: '0.8rem', color: 'gray' }}>Please fill up the form to get started.</Text>
@@ -117,7 +117,7 @@ const ProfessionalLogin = () => {
                   icon={IoMdLock}
                   iconPosition="right"
                   placeholder="password"
-                  style={{ width: isSmallScreen ? '100%' : '18rem' }}
+                  style={{ width: isSmallScreen ? '17rem' : '18rem' }}
                   label="Password"
                 />
               </Box>

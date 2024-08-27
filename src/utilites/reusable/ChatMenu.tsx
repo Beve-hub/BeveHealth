@@ -7,17 +7,17 @@ const user = [
   {
     chat: "hello nice to meet you",
     name: "Dr. John",
-    avatar: <Avatar src="avatar.png" alt="it's me" size={50} />,
+    avatar: <Avatar src="avatar.png" alt="it's me" size={35} />,
   },
   {
     chat: "hello nice to meet you",
     name: "Dr. John",
-    avatar: <Avatar radius="xl" size={50} />,
+    avatar: <Avatar radius="xl" size={35} />,
   },
   {
     chat: "hello nice to meet you",
     name: "Dr. John",
-    avatar: <Avatar src="avatar.png" alt="it's me" size={50} />,
+    avatar: <Avatar src="avatar.png" alt="it's me" size={35} />,
   },
 ];
 
@@ -27,7 +27,7 @@ const ChatMenu = () => {
     <div
       style={{
         backgroundColor: "#E5E5E5",
-        width: "23rem",
+        width: "16rem",
         borderTopLeftRadius: "1rem",
         borderBottomLeftRadius: "1rem",
       }}
@@ -43,7 +43,7 @@ const ChatMenu = () => {
           style={{
             backgroundColor: "none",
             borderRadius: "20rem",
-            width: "16rem",
+            width: "12rem",
           }}
         />
       </Group>
@@ -67,10 +67,10 @@ const ChatMenu = () => {
             >
               {item.avatar}
               <Text display="grid">
-                <Text fz="18" fw="500">
+                <Text fz="14" fw="500">
                   {item.name}
                 </Text>
-                <Text color="#12121260">{item.chat}</Text>
+                <Text color="#12121260" fz="12">{item.chat}</Text>
               </Text>
             </UnstyledButton>
           ))}

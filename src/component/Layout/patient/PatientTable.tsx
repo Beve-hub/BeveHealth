@@ -61,12 +61,12 @@ const PatientTable = () => {
 
     const rows = paginationData.map((element) => (
         <Table.Tr key={element.provider}>
-          <Table.Td onClick={open} fz="18" style={{cursor: "pointer" }}>{element.provider}</Table.Td>
-          <Table.Td fz="18">{element.practice}</Table.Td>
-          <Table.Td fz="18">{element.Reason}</Table.Td>
-          <Table.Td fz="18">{element.Time}</Table.Td>
-          <Table.Td fz="18">{element.Date}</Table.Td>
-          <Table.Td fz="18">{element.Status}</Table.Td>
+          <Table.Td onClick={open} fz="16" style={{cursor: "pointer" }}>{element.provider}</Table.Td>
+          <Table.Td fz="16">{element.practice}</Table.Td>
+          <Table.Td fz="16">{element.Reason}</Table.Td>
+          <Table.Td fz="16">{element.Time}</Table.Td>
+          <Table.Td fz="16">{element.Date}</Table.Td>
+          <Table.Td fz="16">{element.Status}</Table.Td>
         </Table.Tr>
       ));
     return (
@@ -77,8 +77,8 @@ const PatientTable = () => {
         borderRadius: '1rem',
         padding: '1rem 2rem',
       }}>
-        <ScrollArea  h={300} >
-        <Table miw={700}>
+        <ScrollArea  h={250} >
+        <Table miw={600}>
       <Table.Thead  >
         <Table.Tr mb='lg'>
           <Table.Th fz="18">Provider</Table.Th>

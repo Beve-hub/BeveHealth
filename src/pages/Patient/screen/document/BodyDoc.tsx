@@ -118,12 +118,12 @@ const BodyDoc = () => {
 
   const rows = paginationData.map((element) => (
     <Table.Tr key={element.provider}>
-      <Table.Td onClick={openImage} fz="18" style={{cursor: "pointer" }}>{element.provider}</Table.Td>
-      <Table.Td fz="18">{element.practice}</Table.Td>
-      <Table.Td fz="18">{element.Reason}</Table.Td>
-      <Table.Td fz="18">{element.Time}</Table.Td>
-      <Table.Td fz="18">{element.Date}</Table.Td>
-      <Table.Td fz="18"><ActionIcon variant='transparent' color='black'>{element.Action}</ActionIcon> </Table.Td>
+      <Table.Td onClick={openImage} fz="16" style={{cursor: "pointer" }}>{element.provider}</Table.Td>
+      <Table.Td fz="16">{element.practice}</Table.Td>
+      <Table.Td fz="16">{element.Reason}</Table.Td>
+      <Table.Td fz="16">{element.Time}</Table.Td>
+      <Table.Td fz="16">{element.Date}</Table.Td>
+      <Table.Td fz="16"><ActionIcon variant='transparent' color='black'>{element.Action}</ActionIcon> </Table.Td>
     </Table.Tr>
   ));
     return (
@@ -132,17 +132,12 @@ const BodyDoc = () => {
                 <Button  onClick={openFolder} size="md" color="#008C73">Book Session</Button>
                 <Modal opened={opened} onClose={closeFolder} title="Schedule Appointment" centered>
         <form>
-        <TextInput
-          label="Provider"
-          value={provider}
-          onChange={(event) => setProvider(event.currentTarget.value)}
-         
-        />
+        
         <NativeSelect
           label="Practice"
           value={practice}
           onChange={(event) => setPractice(event.currentTarget.value)}
-          data={['Surgeon', 'Radiographer', 'Pediatrics', 'Dentist', 'Pharmacist']}
+          data={['General','Surgeon', 'Radiographer', 'Pediatrics', 'Dentist', 'Pharmacist']}
         />
         <DateInput       
       value={date}
@@ -182,12 +177,12 @@ const BodyDoc = () => {
         <Table miw={700} horizontalSpacing="xl" verticalSpacing="sm">
       <Table.Thead  >
         <Table.Tr mb='lg'>
-          <Table.Th fz="20">Provider</Table.Th>
-          <Table.Th fz="20">Practice</Table.Th>
-          <Table.Th fz="20">Reason</Table.Th>
-          <Table.Th fz="20">Time</Table.Th>
-          <Table.Th fz="20">Date</Table.Th>
-          <Table.Th fz="20">Action</Table.Th>
+          <Table.Th fz="18">Provider</Table.Th>
+          <Table.Th fz="18">Practice</Table.Th>
+          <Table.Th fz="18">Reason</Table.Th>
+          <Table.Th fz="18">Time</Table.Th>
+          <Table.Th fz="18">Date</Table.Th>
+          <Table.Th fz="18">Action</Table.Th>
         </Table.Tr>
       </Table.Thead>
       <Table.Tbody fz="18" >{rows}</Table.Tbody>

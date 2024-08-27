@@ -17,7 +17,7 @@ const Revenue = () => {
             <Group justify='center'>
        <AreaChart
         data={dataRevenue}
-        h={240}     
+        h={200}     
         dataKey="date"
         series={[
         { name: 'Apples', color: '#25CD25' }       

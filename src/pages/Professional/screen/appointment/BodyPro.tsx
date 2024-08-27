@@ -86,11 +86,11 @@ const BodyPro = () => {
 
     const rows = paginationData.map((element) => (
         <Table.Tr key={element.patient}>
-          <Table.Td onClick={open} fz="18" style={{cursor: "pointer" }}>{element.patient}</Table.Td>
-          <Table.Td fz="18">{element.Reason}</Table.Td>
-          <Table.Td fz="18">{element.Time}</Table.Td>
-          <Table.Td fz="18">{element.Date}</Table.Td>
-          <Table.Td fz="18">{element.Status ? (<Group>
+          <Table.Td onClick={open} fz="14" style={{cursor: "pointer" }}>{element.patient}</Table.Td>
+          <Table.Td fz="14">{element.Reason}</Table.Td>
+          <Table.Td fz="14">{element.Time}</Table.Td>
+          <Table.Td fz="14">{element.Date}</Table.Td>
+          <Table.Td fz="14">{element.Status ? (<Group>
             <ActionIcon variant="subtle" color="gray">
                 <MdOutlineCheckBox style={{ width: rem(24), height: rem(24) }} color='#008C73' />
               </ActionIcon>
@@ -99,12 +99,13 @@ const BodyPro = () => {
                   </ActionIcon>
           </Group>) : (<Group>
             
-          </Group>)}</Table.Td>
+          </Group>)}
+          </Table.Td>
         </Table.Tr>
       ));
     return (
       <div>
-        <Box my="100" style={{    
+        <Box my="80" style={{    
             maxWidth:'100%',
             height: 'auto',
             background: '#F1F1F1',
@@ -112,9 +113,9 @@ const BodyPro = () => {
             padding: '1rem 2rem',
           }}>
             <ScrollArea  >
-            <Table miw={1000} verticalSpacing="sm">
+            <Table miw={600} >
           <Table.Thead  >
-            <Table.Tr mb='lg'>
+            <Table.Tr mb='sm'>
               <Table.Th fz="18">Patient</Table.Th>
               <Table.Th fz="18">Reason</Table.Th>
               <Table.Th fz="18">Time</Table.Th>

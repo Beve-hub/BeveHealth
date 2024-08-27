@@ -136,7 +136,7 @@ const LabReport = () => {
           <Table.Tbody fz="18" mt="lg">{rows}</Table.Tbody>
         </Table>
         </ScrollArea>
-        </Box>
+          </Box>
         )
 }
 

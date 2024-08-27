@@ -20,7 +20,7 @@ const Review = () => {
         <Text fz="18" fw="700" mb="10">Patient Review</Text>
        <Group justify='center'>
        <BarChart
-      h={250}
+      h={200}
       data={dataReview}
       dataKey="review"
       orientation="vertical"

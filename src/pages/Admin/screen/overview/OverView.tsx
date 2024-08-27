@@ -6,7 +6,7 @@ import BodyAd from './BodyAd';
 
 const OverView = () => {
     return (
-        <Container size="xl" my="md">
+        <Container size="lg" my="md">
         <Header/>
         <BodyAd/>
         </Container>

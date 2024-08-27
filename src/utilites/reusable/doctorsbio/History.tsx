@@ -8,80 +8,70 @@ import { useNavigate } from "react-router-dom";
 
 const data = [
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',     
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
       Action: <IconDots/>,    
     },
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',     
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
       Action: <IconDots/>,    
     },
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',   
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
       Action: <IconDots/>,    
     },
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',      
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
       Action: <IconDots/>,    
     },
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',      
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
       Action: <IconDots/>,    
     },
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',     
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
       Action: <IconDots/>,    
     },
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',      
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
       Action: <IconDots/>,    
     },
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',     
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
       Action: <IconDots/>,    
     },
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',     
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
       Action: <IconDots/>,    
     },
     {
-      provider: 'Dr David A',
-      practice: 'Lab Tech',
+      patient: 'Dr David A',     
       Reason: 'DNA Test',
       Time: '10:30am',
       Date: '23/03/2024',
@@ -103,9 +93,8 @@ const History = () => {
       navigate('/patientBio')
     };
       const rows =   paginationData.map((element) => (
-          <Table.Tr key={element.provider}>
-            <Table.Td fz="18">{element.provider}</Table.Td>
-            <Table.Td fz="18">{element.practice}</Table.Td>
+          <Table.Tr key={element.patient}>
+            <Table.Td fz="18">{element.patient}</Table.Td>       
             <Table.Td fz="18">{element.Reason}</Table.Td>
             <Table.Td fz="18">{element.Time}</Table.Td>
             <Table.Td fz="18">{element.Date}</Table.Td>
@@ -136,8 +125,7 @@ const History = () => {
           <Table miw={700}  verticalSpacing="sm">
         <Table.Thead  >
           <Table.Tr mb='lg'>
-            <Table.Th fz="20">Provider</Table.Th>
-            <Table.Th fz="20">Practice</Table.Th>
+            <Table.Th fz="20">Patient</Table.Th>            
             <Table.Th fz="20">Reason</Table.Th>
             <Table.Th fz="20">Time</Table.Th>
             <Table.Th fz="20">Date</Table.Th>

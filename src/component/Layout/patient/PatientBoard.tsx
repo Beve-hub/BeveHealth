@@ -24,7 +24,7 @@ const PatientBoard = ( ) => {
           height: 'auto',
           background: 'linear-gradient(90deg, #4ECBB480, #01937965,gray)',
           borderRadius: '1rem',
-          padding: '2rem 2rem',
+          padding: '1rem 2rem',
         }}
       >
         <Group justify='space-between'>
@@ -43,12 +43,7 @@ const PatientBoard = ( ) => {
         </Group>
         <Modal opened={opened} onClose={close} title="Schedule Appointment" centered>
         <form>
-        <TextInput
-          label="Provider"
-          value={provider}
-          onChange={(event) => setProvider(event.currentTarget.value)}
-         
-        />
+        
         <NativeSelect
           label="Practice"
           value={practice}
@@ -82,7 +77,7 @@ const PatientBoard = ( ) => {
       </Modal>
         </Group>
   
-        <Group style={{position:"absolute", right:"45rem"}}>
+        <Group style={{position:"absolute", right:"30rem"}}>
           <Image src={Hero} alt="Avatar" style={{width:'10rem'}} />
         </Group>
         </Group>

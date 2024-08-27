@@ -5,7 +5,7 @@ import BodyDoc from "./BodyDoc"
 
 const Document = () => {
     return (
-        <Container size="xl" my="md">
+        <Container size="lg" my="md">
           <HeaderDoc/>
           <BodyDoc/>
         </Container>

@@ -36,10 +36,9 @@ const Details = () => {
           }}>
             
           <SimpleGrid cols={{base:1, sm:1, lg:5}}
-          spacing="sm"
+          spacing="lg"
             style={{
-                alignItems: 'center',                  
-                          
+                alignItems: 'center' 
             }}>
                   <div style={{ border: '1px solid #12121250', padding:10, borderRadius:10}}>
                   <Image
@@ -53,38 +52,38 @@ const Details = () => {
                    alignItems: 'flex-start'
                   }}>
                       <Text fz="24" fw="700" mb="5">{item.name}</Text>
-                      <Text my="10" fz="18">{item.occupation}</Text>
+                      <Text my="10" fz="14">{item.occupation}</Text>
                       <Text  style={{ display:'flex',justifyContent:'center',alignItems:'center', gap:10 }} mb="5">
-                        <span style={{backgroundColor:'#008C7330', padding:5, borderRadius:5, display:'flex',justifyContent:'center', width:'2rem'  }}>
-                            <IoMdCall size={18}/>
+                        <span style={{backgroundColor:'#008C7330', padding:3, borderRadius:5, display:'flex',justifyContent:'center', width:'2rem'  }}>
+                            <IoMdCall size={16}/>
                         </span>+1 0987657689</Text>
 
                         <Text  style={{ display:'flex',justifyContent:'center',alignItems:'center', gap:10 }} mb="5" ml='10'>
-                        <span style={{backgroundColor:'#008C7330', padding:5, borderRadius:5, display:'flex',justifyContent:'center', width:'2rem'  }}>
-                            <TfiEmail size={18}/>
+                        <span style={{backgroundColor:'#008C7330', padding:3, borderRadius:5, display:'flex',justifyContent:'center', width:'2rem'  }}>
+                            <TfiEmail size={16}/>
                         </span>wales@gmail.com</Text>
 
 
                         <Text style={{ display:'flex',justifyContent:'center',alignItems:'center', gap:10 }} mr="20">
-                        <span style={{backgroundColor:'#008C7330', padding:5, borderRadius:5, display:'flex',justifyContent:'center', width:'2rem'  }}>
-                            <SlLocationPin size={18}/>
+                        <span style={{backgroundColor:'#008C7330', padding:3, borderRadius:5, display:'flex',justifyContent:'center', width:'2rem'  }}>
+                            <SlLocationPin size={16}/>
                         </span>Dope avenue</Text>
                   </div>
                   
                   <div style={{
-                    borderLeft:'1px solid #121212', paddingLeft:70
+                    paddingLeft:70
                   }}>
-                  <Text mb="5" display="grid" fz='18'>Staff ID:  <span style={{fontWeight:500}}>BH12345</span></Text>
-                  <Text mb="5" display="grid" fz='18'>Date of Birth:  <span style={{fontWeight:500}}>19/03/1992</span></Text>
-                  <Text mb="5" display="grid" fz='18'>Gender:  <span style={{fontWeight:500}}>Male</span></Text>
+                  <Text mb="5" display="grid" fz='16'>Staff ID:  <span style={{fontWeight:500}}>BH12345</span></Text>
+                  <Text mb="5" display="grid" fz='16'>Date of Birth:  <span style={{fontWeight:500}}>19/03/1992</span></Text>
+                  <Text mb="5" display="grid" fz='16'>Gender:  <span style={{fontWeight:500}}>Male</span></Text>
                   </div>
 
                   <div style={{
-                    borderLeft:'1px solid #121212', paddingLeft:70
+                     paddingLeft:70
                   }}>
-                  <Text mb="5" display="grid" fz='18'>Genotype:  <span style={{fontWeight:500}}>AA</span></Text>
-                  <Text mb="5" display="grid" fz='18'>Blood Group:  <span style={{fontWeight:500}}>O+</span></Text>
-                  <Text mb="5" display="grid" fz='18'>Start Date:  <span style={{fontWeight:500}}>01/01/2021</span></Text>
+                  <Text mb="5" display="grid" fz='16'>Genotype:  <span style={{fontWeight:500}}>AA</span></Text>
+                  <Text mb="5" display="grid" fz='16'>Blood Group:  <span style={{fontWeight:500}}>O+</span></Text>
+                  <Text mb="5" display="grid" fz='16'>Start Date:  <span style={{fontWeight:500}}>01/01/2021</span></Text>
                   </div>
 
             </SimpleGrid>

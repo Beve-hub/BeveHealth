@@ -7,7 +7,7 @@ import Body from './Body';
 
 const OverviewPatient = () => {
   return (
-    <Container size="xl" my="md">
+    <Container size="lg" my="md">
         <Header/>
         <Body/>
     </Container>

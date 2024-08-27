@@ -7,99 +7,99 @@ const AdminBoard = () => {
       <SimpleGrid cols={{base:1, xs:4}} my="lg">
        <div >
             <Box style={{
-              height: '12rem',
-              width:'18rem',
+              height: '10rem',
+              width:'16rem',
               background: '#4ECBB440',
               borderRadius: '1rem',    
-              padding: '2rem 2rem' ,          
+              padding: '1rem 2rem' ,          
             }}>
               <Group justify="flex-start" style={{
                 backgroundColor:'#ffff',
-                width: '2.5rem',
-                height: '2.5rem',
+                width: '2rem',
+                height: '2rem',
                 borderRadius: '50%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-               <FaWheelchair size={26}/>
+               <FaWheelchair size={24}/>
               </Group>
 
-              <Text fz="22px" fw="500" color="#12121260" mt="20">Total Patients</Text>
-                <Text fz="24px" fw="500">890</Text>
+              <Text fz="18px" fw="500" color="#12121260" mt="20">Total Patients</Text>
+                <Text fz="22px" fw="500">890</Text>
             </Box>
           </div>
 
           <div >
             <Box style={{
-              height: '12rem',
-              width:'18rem',
+              height: '10rem',
+              width:'16rem',
               background: '#00AACF40',
               borderRadius: '1rem',    
-              padding: '2rem 2rem' ,          
+              padding: '1rem 2rem' ,          
             }}>
               <Group justify="flex-start" style={{
                 backgroundColor:'#ffff',
-                width: '2.5rem',
-                height: '2.5rem',
+                width: '2rem',
+                height: '2rem',
                 borderRadius: '50%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-               <FaUserDoctor size={26}/>
+               <FaUserDoctor size={24}/>
               </Group>
 
-              <Text fz="22px" fw="500" color="#12121260" mt="20">Total Doctors</Text>
-                <Text fz="24px" fw="500">30</Text>
+              <Text fz="18px" fw="500" color="#12121260" mt="20">Total Doctors</Text>
+                <Text fz="22px" fw="500">30</Text>
             </Box>
           </div>
           <div >
             <Box style={{
-              height: '12rem',
-              width:'18rem',
+              height: '10rem',
+              width:'16rem',
               background: '#BA68C840',
               borderRadius: '1rem',    
-              padding: '2rem 2rem' ,          
+              padding: '1rem 2rem' ,          
             }}>
               <Group justify="flex-start" style={{
                 backgroundColor:'#ffff',
-                width: '2.5rem',
-                height: '2.5rem',
+                width: '2rem',
+                height: '2rem',
                 borderRadius: '50%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-               <FaCalendarAlt size={26}/>
+               <FaCalendarAlt size={24}/>
               </Group>
 
-              <Text fz="22px" fw="500" color="#12121260" mt="20">Total Appointment</Text>
-                <Text fz="24px" fw="500">890</Text>
+              <Text fz="18px" fw="500" color="#12121260" mt="20">Total Appointment</Text>
+                <Text fz="22px" fw="500">890</Text>
             </Box>
           </div>
           <div >
             <Box style={{
-              height: '12rem',
-              width:'18rem',
+             height: '10rem',
+             width:'16rem',
               background: '#CB4E4E40',
               borderRadius: '1rem',    
-              padding: '2rem 2rem' ,          
+              padding: '1rem 2rem' ,          
             }}>
               <Group justify="flex-start" style={{
                 backgroundColor:'#ffff',
-                width: '2.5rem',
-                height: '2.5rem',
+                width: '2rem',
+                height: '2rem',
                 borderRadius: '50%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-               <FaUserTie size={26}/>
+               <FaUserTie size={24}/>
               </Group>
 
-              <Text fz="22px" fw="500" color="#12121260" mt="20">Total Employers</Text>
-                <Text fz="24px" fw="500">60</Text>
+              <Text fz="18px" fw="500" color="#12121260" mt="20">Total Employers</Text>
+                <Text fz="22px" fw="500">60</Text>
             </Box>
           </div>
           

@@ -9,11 +9,12 @@ const BodyMes = () => {
   return (
     <div>
       <Box
-        mt="40"
+        mt="10"
         style={{
           display: "flex",
           maxWidth: "100%",
-          height: "50rem",
+          height: "38rem",
+          justifyContent: "center"
         }}
       >
         <ChatMenu />
