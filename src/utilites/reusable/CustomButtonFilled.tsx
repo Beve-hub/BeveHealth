@@ -26,7 +26,7 @@ const CustomButtonFilled = (props: CustomButtonProps) => {
             style={{ display: 'flex', justifyContent: 'space-between' }} // Align content
         >
            <span style={{display:'flex', justifyContent:'flex-end' }}>{role === 'backward' && <MdKeyboardDoubleArrowLeft size={24} />}</span> 
-            <span style={{paddingRight:130}}>{label}</span>
+            <span style={{paddingRight:120}}>{label}</span>
             <span style={{display:'flex', justifyContent:'flex-end' }}>{role === 'forward' && <MdKeyboardDoubleArrowRight size={24} />}</span>
         </Button>
     );
