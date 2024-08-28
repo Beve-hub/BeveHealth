@@ -5,7 +5,7 @@ import { AppShell, Burger, Image, Group, NavLink, AppShellHeader,  Text, Box } f
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { FiLogOut, FiSettings } from "react-icons/fi";
 import { FaRegCircleUser } from "react-icons/fa6";
-
+import Logo from '@/assets/logo.svg'
 import Overview from './screen/overview/OverviewPatient';
 import Appointment from './screen/appointment/AppointmentPatient';
 import Document from './screen/document/DocumentPatient';
@@ -52,7 +52,7 @@ const PatientDashboard = () => {
       <AppShellHeader withBorder={false} pt="md">
         <Group px="md">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Image src="/src/assets/logo.svg" alt='' width={50} height={50}/>
+          <Image src={Logo} alt='' width={50} height={50}/>
         </Group>
       </AppShellHeader>
         

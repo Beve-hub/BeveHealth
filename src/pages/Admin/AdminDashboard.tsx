@@ -4,7 +4,7 @@ import { AppShell, Burger, Image, Group, NavLink, AppShellHeader, Avatar, Text, 
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { FiLogOut, FiSettings } from "react-icons/fi";
 import { FaRegCircleUser } from "react-icons/fa6";
-
+import Logo from '@/assets/logo.svg'
 
 
 import Document from './screen/document/Document';
@@ -55,7 +55,7 @@ const AdminDashboard = () => {
       <AppShellHeader withBorder={false} pt="md">
         <Group px="md">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Image src="/src/assets/logo.svg" alt='' width={50} height={50} />
+          <Image src={Logo}alt='' width={50} height={50} />
         </Group>
       </AppShellHeader>
         
