@@ -2,11 +2,13 @@ import { Avatar, Group, ScrollArea, Text, UnstyledButton } from "@mantine/core";
 import { useState } from "react";
 import CustomInput from "./CustomInput";
 import { CiSearch } from "react-icons/ci";
+import { useDispatch } from "react-redux";
+import { setSelectUser } from "@/redux/slices/ChatSlice";
 
 const user = [
   {
     chat: "hello nice to meet you",
-    name: "Dr. John",
+    name: "Dr. samuel",
     avatar: <Avatar src="avatar.png" alt="it's me" size={35} />,
   },
   {
@@ -16,13 +18,19 @@ const user = [
   },
   {
     chat: "hello nice to meet you",
-    name: "Dr. John",
+    name: "Dr. david",
     avatar: <Avatar src="avatar.png" alt="it's me" size={35} />,
   },
 ];
 
-const ChatMenu = () => {
+const ChatMenu = ({ onUserSelect }: { onUserSelect: () => void }) => {
   const [search, setSearch] = useState("");
+  const dispatch = useDispatch()
+
+  const handleClick = (user: string) => {
+    dispatch(setSelectUser(user));
+    onUserSelect();
+  }
   return (
     <div
       style={{
@@ -48,7 +56,7 @@ const ChatMenu = () => {
         />
       </Group>
 
-      <ScrollArea style={{}}>
+      <ScrollArea >
         {user
           .filter((user) =>
             user.name.toLowerCase().includes(search.toLowerCase())
@@ -56,13 +64,14 @@ const ChatMenu = () => {
           .map((item, index) => (
             <UnstyledButton
               key={index}
+              onClick={() => handleClick(item.name)}
               style={{
                 cursor: "pointer",
                 display: "flex",
                 gap: 20,
                 marginLeft: 20,
                 paddingTop: 10,
-                paddingBottom: 10,
+                paddingBottom: 10,                
               }}
             >
               {item.avatar}
