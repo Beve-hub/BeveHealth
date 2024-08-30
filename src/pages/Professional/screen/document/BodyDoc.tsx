@@ -91,7 +91,7 @@ const BodyDoc = () => {
 
 
   const handleClick = () => {
-    navigate('/patientBio')
+    navigate('/patDocData')
   };
     const rows =   paginationData.map((element) => (
         <Table.Tr key={element.provider}>

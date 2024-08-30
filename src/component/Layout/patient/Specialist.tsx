@@ -32,7 +32,7 @@ const Specialist = () => {
           </Group>  
           <Group>
           <Group gap={-40}>{avatars}</Group>
-            <MdKeyboardArrowRight size={20} /> 
+            
           </Group>      
           
         </Group>
@@ -42,7 +42,7 @@ const Specialist = () => {
           </Group>  
           <Group>
           <Group gap={-40}>{avatars}</Group>
-            <MdKeyboardArrowRight size={20} /> 
+            
           </Group>      
           
         </Group>

@@ -21,6 +21,7 @@ import NurseRegister from "@/pages/nurse/NurseRegister";
 import NurseLogin from "@/pages/nurse/NurseLogin";
 import NurseDashboard from "@/pages/nurse/NurseDashboard";
 import PatBioData from "@/component/Layout/nurse/PatBioData";
+import PatDocData from "@/component/Layout/professional/PatDocData";
 
 
 
@@ -49,6 +50,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/doctorDetails" Component={DoctorDetails} />
         <Route path="/medicalDetails" Component={MedicaDetails} />
         <Route path="/patBioData" Component={PatBioData} />
+        <Route path="/patDocData" Component={PatDocData} />
       </Routes>
     </Router>
   );
